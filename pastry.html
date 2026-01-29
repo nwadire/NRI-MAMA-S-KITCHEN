@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NRI MAMA'S KITCHEN menu</title>
+    <link href="./styles.css" rel="stylesheet">
+</head>
+<body>
+     <header class="navbar">
+        <div class="logo">
+            <img src="/image/WhatsApp Image 2026-01-23 at 9.12.55 PM.jpeg" alt="NRI MAMA'S KITCHEN Logo">
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="media.html">Media</a>
+                <a href="menu.html">Menu</a>
+            </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="slides">
+                <img src="image/download.jpg" class="slide active">
+                <img src="image/13110503.jpg" class="slide">
+                <img src="image/caribbean-cuisine-03.jpg" class="slide">
+            </div>
+            <div class="hero-text">
+                <h2 class="welcome">Welcome to</h2>
+                <h2 class="nri"><strong>NRI MAMA'S KITCHEN</strong></h2>
+                <p class="text-format"><em>Your taste of home away from home.</em></p>
+            </div>
+            <div class="dots">
+                <span class="dot active" onclick="showSlide(0)"></span>
+                <span class="dot" onclick="showSlide(1)"></span>
+                <span class="dot" onclick="showSlide(2)"></span>
+            </div>
+            <script src="script.js"></script>
+        </section>
+
+        <div class="menu-buttons">
+           <a href="menu.html">All Food</a>
+            <a href="food.html">Food</a>
+            <a href="protein.html">Protein</a>
+            <a href="pastry.html" class="active">Pastry</a>
+            <a href="cakes.html">Cakes</a>
+            <a href="shawarma.html">Shawarma</a>
+            <a href="icecream.html">Ice Cream</a>
+            <a href="drinks.html">drinks</a>
+            <a href="family-pack.html">family-pack</a>
+        </div>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="image/CFC021_1712155117664.jpg">
+                <h3>Charcolite Chicken</h3>
+                <p>Charcolite Chicken</p>
+                <div class="price">₦2,500</div>
+                <button class="add-to-cart" data-name="Charcolite Chicken" data-price="2500">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="image/CFC024_1712155052502.jpg">
+                <h3>Turkey</h3>
+                <p>Turkey</p>
+                <div class="price">₦3,000</div>
+                <button class="add-to-cart" data-name="Turkey" data-price="3000">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="image/a.jpg">
+                <h3>Goat Meat</h3>
+                <p>Goat Meat</p>
+                <div class="price">₦1,500</div>
+                <button class="add-to-cart" data-name="Goat Meat" data-price="1500">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="image/CFC071_1712155293396 (1).jpg">
+                <h3>Snail</h3>
+                <p>Snail</p>
+                <div class="price">₦2,000</div>
+                <button class="add-to-cart" data-name="Snail" data-price="2000">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="image/CFC072_1712155287393.jpg">
+                <h3>Assorted Meat</h3>
+                <p>Assorted Meat</p>
+                <div class="price">₦1,200</div>
+                <button class="add-to-cart" data-name="Assorted Meat" data-price="1200">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="image/CFC074_1712155282496.jpg">
+                <h3>Fish Delight</h3>
+                <p>Fish Delight</p>
+                <div class="price">₦2,200</div>
+                <button class="add-to-cart" data-name="Fish Delight" data-price="2200">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="image/CFC076_1712155236685.jpg">
+                <h3>Crunchy Chicken</h3>
+                <p>Crunchy Chicken</p>
+                <div class="price">₦2,800</div>
+                <button class="add-to-cart" data-name="Crunchy Chicken" data-price="2800">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="image/CFC080_1712155231816.jpg">
+                <h3>Combo Chicken</h3>
+                <p>Combo Chicken</p>
+                <div class="price">₦3,500</div>
+                <button class="add-to-cart" data-name="Combo Chicken" data-price="3500">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="image/CFC081_1712155259538.jpg">
+                <h3>Beef</h3>
+                <p>Beef</p>
+                <div class="price">₦2,400</div>
+                <button class="add-to-cart" data-name="Beef" data-price="2400">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="image/CFC083_1712155253829.jpg">
+                <h3>Grilled Fish</h3>
+                <p>Grilled Fish</p>
+                <div class="price">₦2,100</div>
+                <button class="add-to-cart" data-name="Grilled Fish" data-price="2100">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="image/Akara recipe sisiyemmie.jpg">
+                <h3>nigerian Akara</h3>
+                <p>nigerian Akara</p>
+                <div class="price">₦1,400</div>
+                <button class="add-to-cart" data-name="nigerian Akara" data-price="1400">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="image/IMG_9896 (2).jpg">
+                <h3>rice and stew nigerian</h3>
+                <p>rice and stew nigerian</p>
+                <div class="price">₦1,200</div>
+                <button class="add-to-cart" data-name="rice and stew nigerian" data-price="1200">Add to Cart</button>
+            </div>
+        </div>
+    </main>
+ <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="/image/WhatsApp Image 2026-01-23 at 9.12.55 PM.jpeg" alt="NRI MAMA'S KITCHEN Logo">
+                <h3>NRI MAMA'S KITCHEN</h3>
+            </div>
+            <div class="footer-hours">
+                <strong>Opening Hours</strong><br>
+                Mondays to Sundays<br>
+                11:00 AM to 8:00 PM
+            </div>
+            <div class="footer-contact">
+                <strong>Contact Us</strong><br>
+                <a href="mailto:Kelechinwadire@gmail.com">customercare@nrimamas.com</a>
+                <a href="tel:08081695675">08081695675</a>
+                <a href="tel:08162050512">08162050512</a>
+            </div>
+            <div class="footer-links">
+                <strong>Quick Navigation</strong><br>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="media.html">Media</a>
+                <a href="menu.html">Menu</a>
+                <a href="booking.html">Booking</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms and Conditions</a>
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fas fa-envelope"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 nrimamakitchen. All rights reserved.
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

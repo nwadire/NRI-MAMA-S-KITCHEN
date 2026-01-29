@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NRI MAMA'S KITCHEN | Admin</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- LOGIN SECTION -->
+<section class="login-section" id="loginSection">
+  <div class="login-box">
+    <h2>🔐 Admin Login</h2>
+    <p>NRI MAMA'S KITCHEN</p>
+
+    <input type="password" id="adminPassword" placeholder="Enter Admin Password">
+    <button onclick="login()">Login</button>
+
+    <p class="error" id="loginError"></p>
+  </div>
+</section>
+
+<!-- DASHBOARD SECTION -->
+<section class="admin-section" id="dashboardSection" style="display:none;">
+  <div class="admin-container">
+    <h2>📊 Booking Admin Dashboard</h2>
+    <button class="logout-btn" onclick="logout()">Logout</button>
+
+    <table class="admin-table">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Name</th>
+          <th>Phone</th>
+          <th>Event</th>
+          <th>Guests</th>
+          <th>Location</th>
+          <th>Service</th>
+        </tr>
+      </thead>
+      <tbody id="bookingTable"></tbody>
+    </table>
+
+    <button class="clear-btn" onclick="clearBookings()">Clear All Bookings</button>
+  </div>
+</section>
+
+<script>
+const ADMIN_PASSWORD = "nri123"; // 🔴 CHANGE THIS PASSWORD
+
+function login() {
+  const pass = document.getElementById("adminPassword").value;
+
+  if (pass === ADMIN_PASSWORD) {
+    localStorage.setItem("adminLoggedIn", "true");
+    showDashboard();
+  } else {
+    document.getElementById("loginError").textContent = "Incorrect password!";
+  }
+}
+
+function logout() {
+  localStorage.removeItem("adminLoggedIn");
+  location.reload();
+}
+
+function showDashboard() {
+  document.getElementById("loginSection").style.display = "none";
+  document.getElementById("dashboardSection").style.display = "block";
+  loadBookings();
+}
+
+function loadBookings() {
+  const bookings = JSON.parse(localStorage.getItem("nriBookings")) || [];
+  const table = document.getElementById("bookingTable");
+  table.innerHTML = "";
+
+  bookings.forEach(b => {
+    table.innerHTML += `
+      <tr>
+        <td>${b.createdAt}</td>
+        <td>${b.name}</td>
+        <td>${b.phone}</td>
+        <td>${b.event}</td>
+        <td>${b.guests}</td>
+        <td>${b.city}, ${b.state}</td>
+        <td>${b.service}</td>
+      </tr>
+    `;
+  });
+}
+
+function clearBookings() {
+  if (confirm("Delete all bookings?")) {
+    localStorage.removeItem("nriBookings");
+    loadBookings();
+  }
+}
+
+if (localStorage.getItem("adminLoggedIn") === "true") {
+  showDashboard();
+}
+</script>
+
+</body>
+</html>
