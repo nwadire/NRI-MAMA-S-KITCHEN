@@ -4,24 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NRI MAMA'S KITCHEN</title>
+    <meta name="application-name" content="NRI MAMA'S KITCHEN">
+    <meta name="theme-color" content="#8b2e00">
+    <meta property="og:site_name" content="NRI MAMA'S KITCHEN">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon.png">
     <link href="./styles.css" rel="stylesheet">
 </head>
 
 <body>
     <header class="navbar">
-        <div class="logo">
-            <img src="/image/WhatsApp Image 2026-01-23 at 9.12.55 PM.jpeg" alt="NRI MAMA'S KITCHEN Logo">
-        </div>
-        <div class="hamburger" onclick="toggleMenu()">
+        <a class="logo" href="index.html" aria-label="NRI MAMA'S KITCHEN home">
+            <img src="image/site-logo.jpeg" alt="NRI MAMA'S KITCHEN logo" width="1024" height="1024">
+        </a>
+        <button class="hamburger" type="button" aria-label="Open navigation" aria-controls="navLinks" aria-expanded="false" onclick="toggleMenu()">
             <span></span>
             <span></span>
             <span></span>
-        </div>
-            <nav class="nav-links" id="navLinks">
+        </button>
+            <nav class="nav-links" id="navLinks" aria-label="Main navigation">
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="media.html">Media</a>
-                <a href="menu.html">Menu</a>
+                <a href="booking.html">Booking</a>
             </nav>
     </header>
     <main>
@@ -57,52 +61,52 @@
                 </div>
             </a>
 
-            <a href="menu.html" class="cta-card menu">
+            <a href="media.html" class="cta-card gallery-cta">
                 <div class="cta-overlay">
-                    <h3>View Menu</h3>
-                    <span>Learn more</span>
+                    <h3>Explore Our Gallery</h3>
+                    <span>See our food and events</span>
                 </div>
             </a>
         </section>
+        <section class="faq-preview">
+            <div class="faq-preview-inner">
+                <p class="eyebrow">Questions about our services?</p>
+                <h2>We’re happy to help</h2>
+                <p>Learn about our catering, cooking service, food orders and how to request a quotation.</p>
+                <a href="booking.html#faq">View All FAQs</a>
+            </div>
+        </section>
     </main>
-    <footer>
+    <footer class="site-footer">
         <div class="footer-container">
-            <div class="footer-logo">
-                <img src="/image/WhatsApp Image 2026-01-23 at 9.12.55 PM.jpeg" alt="NRI MAMA'S KITCHEN Logo">
-                <h3>NRI MAMA'S KITCHEN</h3>
-            </div>
-            <div class="footer-hours">
-                <strong>Opening Hours</strong><br>
-                Mondays to Sundays<br>
-                11:00 AM to 8:00 PM
-            </div>
-            <div class="footer-contact">
-                <strong>Contact Us</strong><br>
-                <a href="mailto:Kelechinwadire@gmail.com">customercare@nrimamas.com</a>
-                <a href="tel:08081695675">08081695675</a>
-                <a href="tel:08162050512">08162050512</a>
-            </div>
-            <div class="footer-links">
-                <strong>Quick Navigation</strong><br>
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="media.html">Media</a>
-                <a href="menu.html">Menu</a>
-                <a href="booking.html">Booking</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms and Conditions</a>
-            </div>
-            <div class="footer-social">
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fas fa-envelope"></i></a>
-                <a href="#"><i class="fab fa-tiktok"></i></a>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            &copy; 2026 nrimamakitchen. All rights reserved.
+            <a class="footer-logo" href="index.html">
+                <img src="image/site-logo.jpeg" alt="NRI MAMA'S KITCHEN logo" width="1024" height="1024">
+                <span>NRI MAMA'S KITCHEN</span>
+            </a>
+            <section class="footer-contact" aria-labelledby="footerContactHeading">
+                <h2 id="footerContactHeading">Contact</h2>
+                <a href="tel:+2348081695675">08081695675</a>
+                <a href="tel:+2348162050512">08162050512</a>
+                <a href="mailto:Kelechinwadire@gmail.com">Kelechinwadire@gmail.com</a>
+            </section>
+            <section class="footer-hours" aria-labelledby="footerHoursHeading">
+                <h2 id="footerHoursHeading">Opening hours</h2>
+                <p>Monday to Sunday<br>11:00 AM to 8:00 PM</p>
+            </section>
+            <nav class="footer-links" aria-labelledby="footerNavigationHeading">
+                <h2 id="footerNavigationHeading">Quick Navigation</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="media.html">Media</a></li>
+                    <li><a href="booking.html">Booking</a></li>
+                    <li><a href="booking.html#faq">FAQ</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms-and-conditions.html">Terms and Conditions</a></li>
+                </ul>
+            </nav>
         </div>
     </footer>
+    <script src="cookie-consent.js"></script>
 </body>
 </html>

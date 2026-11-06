@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Request NRI MAMA'S KITCHEN cooking service for your event.">
+  <title>Cooking Service Booking | NRI MAMA'S KITCHEN</title>
+  <meta name="application-name" content="NRI MAMA'S KITCHEN">
+  <meta name="theme-color" content="#8b2e00">
+  <meta property="og:site_name" content="NRI MAMA'S KITCHEN">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="booking-section">
+    <div class="booking-container booking-container-wide booking-wizard">
+      <p class="eyebrow">Good food for every gathering</p>
+      <h1 class="booking-title">Cooking Service</h1>
+      <p class="booking-subtitle">You provide the ingredients and materials; our team prepares your chosen dishes for your event.</p>
+      <div class="wizard-topline">
+        <a class="text-button" href="booking.html"> ← Choose a different service</a>
+        <strong>Cooking Service</strong>
+      </div>
+      <br><ol class="wizard-progress" id="cookingProgress" aria-label="Cooking service booking progress"></ol>
+      <form id="cookingForm" class="booking-form wizard-form" novalidate>
+        <section class="booking-panel wizard-step" data-step="0">
+          <p class="step-kicker">Step 1 of 6</p>
+          <h2 class="form-section-title">Guest Details</h2>
+          <div class="form-group">
+            <label for="cookingGuests">Number of guests *</label>
+            <select id="cookingGuests" name="guests" data-store required>
+              <option value="">Select guest count</option>
+              <option value="100">100 people</option><option value="200">200 people</option>
+              <option value="300">300 people</option><option value="400">400 people</option>
+              <option value="500">500 people</option><option value="600">600 people</option>
+              <option value="700">700 people</option><option value="800">800 people</option>
+              <option value="900">900 people</option><option value="1000">1,000 people</option>
+            </select>
+          </div>
+          <p class="booking-help">Your guest count will be carried through to the rest of your request.</p>
+        </section>
+
+        <section class="booking-panel wizard-step" data-step="1" hidden>
+          <p class="step-kicker">Step 2 of 6</p>
+          <h2 class="form-section-title">What Would You Like Us to Cook for Your Event?</h2>
+          <p>Add each dish separately with its quantity, ingredients, materials and instructions.</p>
+          <div id="cookingFoods" class="dynamic-entry-list"></div>
+          <button type="button" class="secondary-button" id="addCookingFood">+ Add Another Food</button>
+          <div class="form-group">
+            <label for="cookingOtherMaterials">Additional Ingredients and Materials You Will Provide</label>
+            <textarea id="cookingOtherMaterials" name="otherMaterials" rows="4" data-store></textarea>
+          </div>
+        </section>
+
+        <section class="booking-panel wizard-step" data-step="2" hidden>
+          <p class="step-kicker">Step 3 of 6</p>
+          <h2 class="form-section-title">Where Would You Like Us to Prepare Your Food?</h2>
+          <div class="choice-stack">
+            <label class="choice-card">
+              <input type="radio" name="cookingLocation" value="Cook at my event location" required>
+              <span><strong>Cook at My Event Location</strong><small>Our team will come to your venue and prepare the food there using the ingredients and materials you provide.</small></span>
+            </label>
+            <label class="choice-card">
+              <input type="radio" name="cookingLocation" value="Cook at NRI MAMA'S KITCHEN">
+              <span><strong>Cook at NRI MAMA'S KITCHEN</strong><small>You provide the ingredients and cooking materials, and we prepare the food at our kitchen. We then arrange to bring the prepared food to your event location.</small></span>
+            </label>
+          </div>
+          <div class="form-group">
+            <label for="cookingAddress" id="cookingAddressLabel">Event venue address *</label>
+            <input id="cookingAddress" name="address" autocomplete="street-address" data-store required>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label for="cookingCity">City *</label><input id="cookingCity" name="city" data-store required></div>
+            <div class="form-group"><label for="cookingState">State *</label><input id="cookingState" name="state" data-store required></div>
+          </div>
+          <div class="form-group conditional-field" id="cookingDirectionsField">
+            <label for="cookingDirections">Directions or landmarks</label>
+            <input id="cookingDirections" name="directions" data-store>
+          </div>
+          <div class="form-group conditional-field" id="cookingDeliveryTimeField" hidden>
+            <label for="cookingDeliveryTime">Preferred delivery time *</label>
+            <input id="cookingDeliveryTime" name="deliveryTime" type="time">
+          </div>
+          <div class="form-group"><label for="cookingLocationInfo">Additional information about the location</label><textarea id="cookingLocationInfo" name="locationInfo" rows="3" data-store></textarea></div>
+          <div class="form-group conditional-field" id="cookingDeliveryInfoField" hidden>
+            <label for="cookingDeliveryInfo">Additional delivery instructions</label><textarea id="cookingDeliveryInfo" name="deliveryInfo" rows="3" data-store></textarea>
+          </div>
+        </section>
+
+        <section class="booking-panel wizard-step" data-step="3" hidden>
+          <p class="step-kicker">Step 4 of 6</p>
+          <h2 class="form-section-title">Would You Like Us to Serve the Food at Your Event?</h2>
+          <div class="choice-stack">
+            <label class="choice-card">
+              <input type="radio" name="serving" value="Yes, NRI MAMA'S KITCHEN should serve the food" required>
+              <span><strong>Yes, NRI MAMA'S KITCHEN Should Serve the Food</strong><small>Our team will assist with serving the food to your guests.</small></span>
+            </label>
+            <label class="choice-card">
+              <input type="radio" name="serving" value="No, just cook the food">
+              <span><strong>No, Just Cook the Food</strong><small>We prepare the food, and you or your event attendants handle serving.</small></span>
+            </label>
+          </div>
+        </section>
+
+        <section class="booking-panel wizard-step" data-step="4" hidden>
+          <p class="step-kicker">Step 5 of 6</p>
+          <h2 class="form-section-title">Customer and Event Details</h2>
+          <div class="form-row">
+            <div class="form-group"><label for="cookingName">Full name *</label><input id="cookingName" name="name" autocomplete="name" data-store required></div>
+            <div class="form-group"><label for="cookingPhone">Phone number *</label><input id="cookingPhone" name="phone" type="tel" autocomplete="tel" data-store required></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label for="cookingWhatsapp">WhatsApp number (if different)</label><input id="cookingWhatsapp" name="whatsapp" type="tel" data-store></div>
+            <div class="form-group"><label for="cookingEmail">Email address *</label><input id="cookingEmail" name="email" type="email" autocomplete="email" data-store required></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label for="cookingEventType">Event type *</label><select id="cookingEventType" name="eventType" data-store required>
+              <option value="">Select event type</option><option>Wedding</option><option>Birthday</option>
+              <option>Traditional Marriage</option><option>Burial</option><option>Corporate Event</option>
+              <option>Church Event</option><option>Family Gathering</option><option>Other</option>
+            </select></div>
+            <div class="form-group"><label for="cookingDate">Event date *</label><input id="cookingDate" name="date" type="date" data-store required></div>
+          </div>
+          <div class="form-group"><label for="cookingTime">Preferred cooking or delivery time *</label><input id="cookingTime" name="time" type="time" data-store required></div>
+          <div class="form-group"><label for="cookingEventInfo">Additional event information</label><textarea id="cookingEventInfo" name="eventInfo" rows="3" data-store></textarea></div>
+          <p class="guest-reminder">Guests selected: <strong id="cookingGuestReminder">Not selected</strong></p>
+        </section>
+
+        <section class="booking-panel wizard-step" data-step="5" hidden>
+          <p class="step-kicker">Step 6 of 6</p>
+          <h2 class="form-section-title">Review Your Cooking Service Request</h2>
+          <div class="review-summary" id="cookingReview"></div>
+          <p class="booking-help">Use Previous or Edit to change any details before you submit the request.</p>
+          <div class="submit-options">
+            <button type="button" class="booking-btn" id="submitCookingWhatsApp">Submit Cooking Service Request via WhatsApp</button>
+            <button type="button" class="secondary-button" id="submitCookingEmail">Send via Email</button>
+          </div>
+        </section>
+        <div class="wizard-controls">
+          <button type="button" class="secondary-button" id="cookingPrevious" hidden>Previous</button>
+          <button type="button" class="booking-btn" id="cookingNext">Continue</button>
+        </div>
+      </form>
+      <p id="cookingStatus" class="booking-status" role="status" aria-live="polite"></p>
+      <p class="email-notice">Email opens a draft addressed to our configured contact. You must review and send the draft; this website does not send email automatically.</p>
+      <a id="cookingWhatsappFallback" class="whatsapp-fallback" href="#" target="_blank" rel="noopener noreferrer" hidden>Open booking message in WhatsApp</a>
+      <a id="cookingEmailFallback" class="whatsapp-fallback email-fallback" href="#" hidden>Open email draft</a>
+    </div>
+  </main>
+
+  <script src="order-system.js"></script>
+  <script>
+    const COOKING_KEY = "nriKitchenCookingService";
+    const COOKING_EMAIL = "Kelechinwadire@gmail.com";
+    const COOKING_WHATSAPP = "2348162050512";
+    const cookingForm = document.getElementById("cookingForm");
+    const cookingSteps = ["Guest Details", "Food & ingredients", "Cooking location", "Serving", "Details", "Review"];
+    let cookingStep = 0;
+    let cookingFoods = [];
+    let cookingSubmittedOrderId = "";
+
+    function toggleMenu() {
+      const nav = document.getElementById("navLinks");
+      const button = document.querySelector(".hamburger");
+      const open = nav.classList.toggle("active");
+      button.setAttribute("aria-expanded", String(open));
+    }
+
+    function cookingField(name) {
+      return cookingForm.querySelector(`[name="${name}"]:checked`)?.value ||
+        cookingForm.querySelector(`[name="${name}"]`)?.value?.trim() || "";
+    }
+
+    function saveCookingProgress() {
+      const values = {};
+      cookingForm.querySelectorAll("[data-store]").forEach(field => { values[field.id] = field.value; });
+      cookingForm.querySelectorAll('input[type="radio"]:checked').forEach(field => { values[`radio:${field.name}`] = field.value; });
+      try {
+        localStorage.setItem(COOKING_KEY, JSON.stringify({
+          values, foods: cookingFoods, submittedOrderId: cookingSubmittedOrderId
+        }));
+      } catch (error) {
+        console.error("Could not save cooking service progress.", error);
+        document.getElementById("cookingStatus").textContent = "Your browser could not save progress. Keep this page open while you finish.";
+      }
+    }
+
+    function cookingProgress() {
+      const list = document.getElementById("cookingProgress");
+      list.replaceChildren();
+      cookingSteps.forEach((label, index) => {
+        const item = document.createElement("li");
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = index === cookingStep ? "is-current" : index < cookingStep ? "is-complete" : "";
+        button.textContent = `${index + 1}. ${label}`;
+        button.setAttribute("aria-current", index === cookingStep ? "step" : "false");
+        button.disabled = index > cookingStep;
+        if (index <= cookingStep) button.addEventListener("click", () => cookingShowStep(index));
+        item.append(button);
+        list.append(item);
+      });
+    }
+
+    function cookingShowStep(index) {
+      cookingStep = Math.max(0, Math.min(5, index));
+      cookingForm.querySelectorAll(".wizard-step").forEach(step => { step.hidden = Number(step.dataset.step) !== cookingStep; });
+      document.getElementById("cookingPrevious").hidden = cookingStep === 0;
+      document.getElementById("cookingNext").hidden = cookingStep === 5;
+      document.getElementById("cookingStatus").textContent = "";
+      cookingProgress();
+      if (cookingStep === 5) cookingRenderReview();
+      saveCookingProgress();
+      cookingForm.querySelector(`.wizard-step[data-step="${cookingStep}"]`).scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    function cookingAddFood(food = {}) {
+      const entry = {
+        name: food.name || "", quantity: food.quantity || "", ingredients: food.ingredients || "",
+        materials: food.materials || "", instructions: food.instructions || ""
+      };
+      cookingFoods.push(entry);
+      const index = cookingFoods.length - 1;
+      const card = document.createElement("fieldset");
+      card.className = "dynamic-food-entry";
+      const legend = document.createElement("legend");
+      legend.textContent = `Food ${index + 1}`;
+      card.append(legend);
+      [
+        ["name", "Food name *", "text", "e.g. Rice, Oha Soup", true],
+        ["quantity", "Quantity needed *", "text", "e.g. 2 bags, 3 pots, or quantity", true],
+        ["ingredients", "Ingredients you will provide ", "textarea", "List ingredients for this dish", true],
+        ["materials", "Other materials you will provide", "textarea", "Pots, utensils, gas, firewood or other materials", false],
+        ["instructions", "Additional instructions", "textarea", "Preparation details for this dish", false]
+      ].forEach(([key, labelText, type, placeholder, required]) => {
+        const group = document.createElement("div");
+        group.className = "form-group";
+        const id = `cookingFood${index}_${key}`;
+        const label = document.createElement("label");
+        label.htmlFor = id;
+        label.textContent = labelText;
+        const field = type === "textarea" ? document.createElement("textarea") : document.createElement("input");
+        field.id = id;
+        field.value = entry[key];
+        field.placeholder = placeholder;
+        field.required = required;
+        if (type === "textarea") field.rows = 3;
+        field.addEventListener("input", () => { entry[key] = field.value; saveCookingProgress(); });
+        group.append(label, field);
+        card.append(group);
+      });
+      const remove = document.createElement("button");
+      remove.type = "button";
+      remove.className = "remove-food-button";
+      remove.textContent = "Remove this food";
+      remove.addEventListener("click", () => {
+        cookingSubmittedOrderId = "";
+        cookingFoods.splice(index, 1);
+        cookingRenderFoods();
+        saveCookingProgress();
+      });
+      card.append(remove);
+      document.getElementById("cookingFoods").append(card);
+    }
+
+    function cookingRenderFoods() {
+      const list = document.getElementById("cookingFoods");
+      const foods = cookingFoods.slice();
+      cookingFoods = [];
+      list.replaceChildren();
+      if (foods.length) foods.forEach(cookingAddFood);
+      else cookingAddFood();
+    }
+
+    function cookingLocationFields() {
+      const atKitchen = cookingField("cookingLocation") === "Cook at NRI MAMA'S KITCHEN";
+      document.getElementById("cookingAddressLabel").textContent = atKitchen ? "Event delivery address *" : "Event venue address *";
+      document.getElementById("cookingDirectionsField").hidden = atKitchen;
+      document.getElementById("cookingDeliveryTimeField").hidden = !atKitchen;
+      document.getElementById("cookingDeliveryInfoField").hidden = !atKitchen;
+      document.getElementById("cookingDeliveryTime").required = atKitchen;
+    }
+
+    function cookingValidateStep() {
+      const step = cookingForm.querySelector(`.wizard-step[data-step="${cookingStep}"]`);
+      const invalid = Array.from(step.querySelectorAll("input, select, textarea"))
+        .find(field => !field.disabled && !field.checkValidity());
+      if (invalid) {
+        invalid.reportValidity();
+        invalid.focus();
+        return false;
+      }
+      if (cookingStep === 1 && !cookingFoods.some(food => food.name.trim() && food.quantity.trim() && food.ingredients.trim())) {
+        document.getElementById("cookingStatus").textContent = "Add at least one dish with its name, quantity and ingredients before continuing.";
+        return false;
+      }
+      return true;
+    }
+
+    function cookingFoodText() {
+      return cookingFoods.filter(food => food.name.trim()).map((food, index) =>
+        `${index + 1}. ${food.name}\n   Quantity: ${food.quantity}\n   Ingredients: ${food.ingredients}\n   Other materials: ${food.materials || "Not provided"}\n   Instructions: ${food.instructions || "None"}`
+      ).join("\n\n") || "No food details provided";
+    }
+
+    function cookingReviewSection(title, text, step) {
+      const section = document.createElement("section");
+      section.className = "review-section";
+      const header = document.createElement("div");
+      header.className = "review-section-header";
+      const heading = document.createElement("h3");
+      heading.textContent = title;
+      const edit = document.createElement("button");
+      edit.type = "button";
+      edit.className = "review-edit-button";
+      edit.textContent = "Edit";
+      edit.addEventListener("click", () => cookingShowStep(step));
+      header.append(heading, edit);
+      const body = document.createElement("pre");
+      body.textContent = text || "Not provided";
+      section.append(header, body);
+      document.getElementById("cookingReview").append(section);
+    }
+
+    function cookingRenderReview() {
+      const form = cookingForm;
+      const address = [cookingField("address"), cookingField("city"), cookingField("state")].filter(Boolean).join(", ");
+      const customer = `Name: ${cookingField("name")}\nPhone: ${cookingField("phone")}\nWhatsApp: ${cookingField("whatsapp") || cookingField("phone")}\nEmail: ${cookingField("email")}`;
+      const event = `Type: ${cookingField("eventType")}\nDate: ${cookingField("date")}\nPreferred time: ${cookingField("time") || cookingField("deliveryTime")}\nGuests: ${Number(cookingField("guests")).toLocaleString()} people\nAdditional event information: ${cookingField("eventInfo") || "None"}`;
+      const location = `Cooking location: ${cookingField("cookingLocation")}\nAddress: ${address}\nDirections/landmarks: ${cookingField("directions") || "None"}\nDelivery time: ${cookingField("deliveryTime") || "Not applicable"}\nLocation information: ${cookingField("locationInfo") || "None"}\nDelivery instructions: ${cookingField("deliveryInfo") || "None"}`;
+      const review = document.getElementById("cookingReview");
+      review.replaceChildren();
+      cookingReviewSection("Customer information", customer, 4);
+      cookingReviewSection("Event information", event, 4);
+      cookingReviewSection("Food, quantities and ingredients", cookingFoodText(), 1);
+      cookingReviewSection("Additional ingredients and materials", cookingField("otherMaterials") || "None", 1);
+      cookingReviewSection("Cooking location", location, 2);
+      cookingReviewSection("Serving arrangement", cookingField("serving"), 3);
+      cookingReviewSection("Quotation", "Cooking service fee to be confirmed by NRI MAMA'S KITCHEN.");
+      document.getElementById("cookingGuestReminder").textContent = `${Number(cookingField("guests")).toLocaleString()} people`;
+      void form;
+    }
+
+    function cookingBuildOrder(id) {
+      const locationInfo = cookingField("locationInfo");
+      const otherMaterials = cookingField("otherMaterials");
+      return {
+        id,
+        createdAt: new Date().toISOString(),
+        service: "cooking",
+        status: "new",
+        customer: {
+          name: cookingField("name"),
+          phone: cookingField("phone"),
+          whatsapp: cookingField("whatsapp"),
+          email: cookingField("email")
+        },
+        event: {
+          type: cookingField("eventType"),
+          date: cookingField("date"),
+          time: cookingField("time") || cookingField("deliveryTime"),
+          guests: cookingField("guests"),
+          notes: [
+            cookingField("eventInfo"),
+            otherMaterials ? `Additional ingredients and materials: ${otherMaterials}` : ""
+          ].filter(Boolean).join("\n")
+        },
+        delivery: {
+          method: "Cooking service",
+          address: cookingField("address"),
+          city: cookingField("city"),
+          state: cookingField("state"),
+          directions: cookingField("directions"),
+          cookingLocation: cookingField("cookingLocation"),
+          serving: cookingField("serving"),
+          instructions: [
+            cookingField("deliveryTime") ? `Preferred delivery time: ${cookingField("deliveryTime")}` : "",
+            cookingField("deliveryInfo"),
+            locationInfo
+          ].filter(Boolean).join("\n")
+        },
+        items: cookingFoods.filter(food => food.name.trim()).map(food => ({
+          name: food.name.trim(),
+          category: "Cooking service",
+          quantity: food.quantity.trim(),
+          unit: "",
+          unitPrice: null,
+          lineTotal: null,
+          details: [
+            food.ingredients.trim() ? `Ingredients: ${food.ingredients.trim()}` : "",
+            food.materials.trim() ? `Materials: ${food.materials.trim()}` : "",
+            food.instructions.trim() ? `Preparation instructions: ${food.instructions.trim()}` : ""
+          ].filter(Boolean).join("\n")
+        })),
+        knownSubtotal: 0,
+        totalAmount: null,
+        adminNotes: ""
+      };
+    }
+
+    function cookingSubmit(channel) {
+      for (let index = 0; index < 5; index++) {
+        cookingShowStep(index);
+        if (!cookingValidateStep()) return;
+      }
+      cookingShowStep(5);
+      let order;
+      try {
+        order = cookingSubmittedOrderId ? NriOrderSystem.getOrder(cookingSubmittedOrderId) : null;
+        if (!order) {
+          order = cookingBuildOrder(NriOrderSystem.createOrderId());
+          NriOrderSystem.saveOrder(order);
+          cookingSubmittedOrderId = order.id;
+          saveCookingProgress();
+        }
+      } catch (error) {
+        console.error("Could not save the cooking service order.", error);
+        document.getElementById("cookingStatus").textContent = `Your order could not be saved in this browser: ${error.message}`;
+        return;
+      }
+      const message = NriOrderSystem.buildWhatsAppMessage(order);
+      if (channel === "whatsapp") {
+        const url = `https://wa.me/${COOKING_WHATSAPP}?text=${encodeURIComponent(message)}`;
+        window.open(url, "_blank", "noopener,noreferrer");
+        const fallback = document.getElementById("cookingWhatsappFallback");
+        fallback.href = url;
+        fallback.hidden = false;
+        document.getElementById("cookingStatus").textContent = `Order ${order.id} is saved in this browser. Review the details in WhatsApp and press Send to contact the kitchen.`;
+      } else {
+        const url = `mailto:${COOKING_EMAIL}?subject=${encodeURIComponent(`NRI MAMA'S KITCHEN - Cooking Service Request ${order.id}`)}&body=${encodeURIComponent(message)}`;
+        document.getElementById("cookingEmailFallback").href = url;
+        document.getElementById("cookingEmailFallback").hidden = false;
+        window.location.href = url;
+        document.getElementById("cookingStatus").textContent = `Order ${order.id} is saved in this browser. Review and send the email draft; the website does not send email automatically.`;
+      }
+    }
+
+    document.getElementById("addCookingFood").addEventListener("click", () => {
+      cookingSubmittedOrderId = "";
+      cookingAddFood();
+    });
+    document.getElementById("cookingNext").addEventListener("click", () => {
+      if (cookingValidateStep()) cookingShowStep(cookingStep + 1);
+    });
+    document.getElementById("cookingPrevious").addEventListener("click", () => cookingShowStep(cookingStep - 1));
+    document.getElementById("submitCookingWhatsApp").addEventListener("click", () => cookingSubmit("whatsapp"));
+    document.getElementById("submitCookingEmail").addEventListener("click", () => cookingSubmit("email"));
+    cookingForm.addEventListener("input", () => {
+      cookingSubmittedOrderId = "";
+      if (cookingStep === 5) cookingRenderReview();
+      saveCookingProgress();
+    });
+    cookingForm.addEventListener("change", () => {
+      cookingSubmittedOrderId = "";
+      cookingLocationFields();
+      if (cookingStep === 5) cookingRenderReview();
+      saveCookingProgress();
+    });
+    document.getElementById("cookingDate").min = new Date().toISOString().slice(0, 10);
+    cookingRenderFoods();
+    try {
+      const saved = JSON.parse(localStorage.getItem(COOKING_KEY) || "null");
+      if (saved) {
+        cookingSubmittedOrderId = typeof saved.submittedOrderId === "string" ? saved.submittedOrderId : "";
+        cookingStep = 0;
+        cookingFoods = Array.isArray(saved.foods) ? saved.foods : [];
+        Object.entries(saved.values || {}).forEach(([key, value]) => {
+          if (key.startsWith("radio:")) {
+            const radio = Array.from(cookingForm.querySelectorAll('input[type="radio"]'))
+              .find(field => field.name === key.slice(6) && field.value === value);
+            if (radio) radio.checked = true;
+          } else if (document.getElementById(key)) document.getElementById(key).value = value;
+        });
+        cookingRenderFoods();
+      }
+    } catch (error) {
+      console.error("Could not restore saved cooking service progress.", error);
+    }
+    cookingLocationFields();
+    cookingShowStep(0);
+  </script>
+  <footer class="site-footer"><div class="footer-container">
+    <a class="footer-logo" href="index.html"><img src="image/site-logo.jpeg" alt="NRI MAMA'S KITCHEN logo" width="1024" height="1024"><span>NRI MAMA'S KITCHEN</span></a>
+    <section class="footer-contact" aria-labelledby="footerContactHeading"><h2 id="footerContactHeading">Contact</h2><a href="tel:+2348081695675">08081695675</a><a href="tel:+2348162050512">08162050512</a><a href="mailto:Kelechinwadire@gmail.com">Kelechinwadire@gmail.com</a></section>
+    <section class="footer-hours" aria-labelledby="footerHoursHeading"><h2 id="footerHoursHeading">Opening hours</h2><p>Monday to Sunday<br>11:00 AM to 8:00 PM</p></section>
+    <nav class="footer-links" aria-labelledby="footerNavigationHeading"><h2 id="footerNavigationHeading">Quick Navigation</h2><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="media.html">Media</a></li><li><a href="booking.html">Booking</a></li><li><a href="booking.html#faq">FAQ</a></li><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms-and-conditions.html">Terms and Conditions</a></li></ul></nav>
+  </div></footer>
+  <script src="cookie-consent.js"></script>
+</body>
+</html>

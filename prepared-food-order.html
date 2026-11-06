@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Build a prepared food order from the NRI MAMA'S KITCHEN menu.">
+  <title>Prepared Food Order | NRI MAMA'S KITCHEN</title>
+  <meta name="application-name" content="NRI MAMA'S KITCHEN">
+  <meta name="theme-color" content="#8b2e00">
+  <meta property="og:site_name" content="NRI MAMA'S KITCHEN">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <main class="booking-section">
+   <div class="booking-container booking-container-wide booking-wizard">
+     <p class="eyebrow">Good food for every gathering</p>
+     <h1 class="booking-title">Prepared Food Order</h1>
+        <div class="wizard-topline">
+          <a class="text-button" href="booking.html">← Choose a different service</a>
+          <strong>Prepared Food Order</strong>
+        </div>
+    <br><template id="preparedMenuCatalog">
+        <div>
+            <div class="menu-item">
+                <img src="image/banga-soup.jpg">
+                <h3>Banga Soup</h3>
+                <p>Banga Soup</p>
+                <div class="price">₦2,500</div>
+                <button class="add-to-cart" data-name="Banga Soup" data-price="2500">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="image/nigerian-afang-soup-best.jpg">
+                <h3>Nigerian Afang Soup</h3>
+                <p>Nigerian Afang Soup</p>
+                <div class="price">₦3,000</div>
+                <button class="add-to-cart" data-name="Nigerian Afang Soup" data-price="3000">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="image/ofe-owerri.jpg">
+                <h3>ofe-owerri</h3>
+                <p>ofe-owerri</p>
+                <div class="price">₦5,500</div>
+                <button class="add-to-cart" data-name="ofe-owerri" data-price="5500">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="image/oha-soup.jpg">
+                <h3>Oha Soup</h3>
+                <p>Oha Soup</p>
+                <div class="price">₦2,000</div>
+                <button class="add-to-cart" data-name="Oha Soup" data-price="2000">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="image/best-nigerian-okra-soup-recipe.jpg">
+                <h3>best-nigerian-okra-soup-recipe</h3>
+                <p>best-nigerian-okra-soup-recipe</p>
+                <div class="price">₦2,000</div>
+                <button class="add-to-cart" data-name="best-nigerian-okra-soup-recipe" data-price="2000">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="image/bitterleaf-soup.jpg">
+                <h3>bitterleaf-soup</h3>
+                <p>bitterleaf-soup</p>
+                <div class="price">₦2,200</div>
+                <button class="add-to-cart" data-name="bitterleaf-soup" data-price="2200">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="image/Crunchiesss17066 (1).jpg">
+                <h3>Jollof Rice</h3>
+                <p>Includes the cost of packaging @ 200 naira</p>
+                <div class="price">₦1,400</div>
+                <button class="add-to-cart" data-name="Jollof Rice" data-price="1400">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="image/Fried Rice.jpg">
+                <h3>Fried Rice</h3>
+                <p>Includes the cost of packaging @ 200 naira</p>
+                <div class="price">₦1,400</div>
+                <button class="add-to-cart" data-name="Fried Rice" data-price="1400">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="image/1.jpg">
+                <h3>Beef</h3>
+                <p>Beef</p>
+                <div class="price">₦2,400</div>
+                <button class="add-to-cart" data-name="Beef" data-price="2400">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="image/paper soup.jpg">
+                <h3>paper soup</h3>
+                <p>paper soup</p>
+                <div class="price">₦2,100</div>
+                <button class="add-to-cart" data-name="paper soup" data-price="2100">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="image/Crunchiesss.jpg">
+                <h3>nigerian local Rice</h3>
+                <p>Includes the cost of packaging @ 200 naira</p>
+                <div class="price">₦2,000</div>
+                <button class="add-to-cart" data-name="nigerian local Rice" data-price="2,000">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="image/rice.jpg">
+                <h3>Ofada Rice</h3>
+                <p>Includes the cost of packaging @ 200 naira</p>
+                <div class="price">₦1,200</div>
+                <button class="add-to-cart" data-name="Ofada Rice" data-price="2,500">Add to Cart</button>
+            </div>
+             <div class="menu-item">
+                <img src="image/Charcolite Chicken.jpg">
+                <h3>Charcolite Chicken</h3>
+                <p>Charcolite Chicken</p>
+                <div class="price">₦2,500</div>
+                <button class="add-to-cart" data-name="Charcolite Chicken" data-price="2500">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="image/Turkey.jpg">
+                <h3>Turkey</h3>
+                <p>Turkey</p>
+                <div class="price">₦3,000</div>
+                <button class="add-to-cart" data-name="Turkey" data-price="3000">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="image/Goat Meat.jpg">
+                <h3>Goat Meat</h3>
+                <p>Goat Meat</p>
+                <div class="price">₦1,500</div>
+                <button class="add-to-cart" data-name="Goat Meat" data-price="1500">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="image/Snail.jpg">
+                <h3>Snail</h3>
+                <p>Snail</p>
+                <div class="price">₦2,000</div>
+                <button class="add-to-cart" data-name="Snail" data-price="2000">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="image/Fish Delight.jpg">
+                <h3>Fish Delight</h3>
+                <p>Fish Delight</p>
+                <div class="price">₦2,200</div>
+                <button class="add-to-cart" data-name="Fish Delight" data-price="2200">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="image/Crunchy Chicken.jpg">
+                <h3>Crunchy Chicken</h3>
+                <p>Crunchy Chicken</p>
+                <div class="price">₦2,800</div>
+                <button class="add-to-cart" data-name="Crunchy Chicken" data-price="2800">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="image/Combo Chicken.jpg">
+                <h3>Combo Chicken</h3>
+                <p>Combo Chicken</p>
+                <div class="price">₦3,500</div>
+                <button class="add-to-cart" data-name="Combo Chicken" data-price="3500">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="image/Beef.jpg">
+                <h3>Beef</h3>
+                <p>Beef</p>
+                <div class="price">₦2,400</div>
+                <button class="add-to-cart" data-name="Beef" data-price="2400">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="image/Grilled Fish.jpg">
+                <h3>Grilled Fish</h3>
+                <p>Grilled Fish</p>
+                <div class="price">₦2,100</div>
+                <button class="add-to-cart" data-name="Grilled Fish" data-price="2100">Add to Cart</button>
+            </div>
+             <div class="menu-item">
+                <img src="image/CFC021_1712155117664.jpg">
+                <h3>Charcolite Chicken</h3>
+                <p>Charcolite Chicken</p>
+                <div class="price">₦2,500</div>
+                <button class="add-to-cart" data-name="Charcolite Chicken" data-price="2500">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="image/CFC024_1712155052502.jpg">
+                <h3>Turkey</h3>
+                <p>Turkey</p>
+                <div class="price">₦3,000</div>
+                <button class="add-to-cart" data-name="Turkey" data-price="3000">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="image/a.jpg">
+                <h3>Goat Meat</h3>
+                <p>Goat Meat</p>
+                <div class="price">₦1,500</div>
+                <button class="add-to-cart" data-name="Goat Meat" data-price="1500">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="image/CFC071_1712155293396 (1).jpg">
+                <h3>Snail</h3>
+                <p>Snail</p>
+                <div class="price">₦2,000</div>
+                <button class="add-to-cart" data-name="Snail" data-price="2000">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="image/CFC072_1712155287393.jpg">
+                <h3>Assorted Meat</h3>
+                <p>Assorted Meat</p>
+                <div class="price">₦1,200</div>
+                <button class="add-to-cart" data-name="Assorted Meat" data-price="1200">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="image/CFC074_1712155282496.jpg">
+                <h3>Fish Delight</h3>
+                <p>Fish Delight</p>
+                <div class="price">₦2,200</div>
+                <button class="add-to-cart" data-name="Fish Delight" data-price="2200">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="image/CFC076_1712155236685.jpg">
+                <h3>Crunchy Chicken</h3>
+                <p>Crunchy Chicken</p>
+                <div class="price">₦2,800</div>
+                <button class="add-to-cart" data-name="Crunchy Chicken" data-price="2800">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="image/CFC080_1712155231816.jpg">
+                <h3>Combo Chicken</h3>
+                <p>Combo Chicken</p>
+                <div class="price">₦3,500</div>
+                <button class="add-to-cart" data-name="Combo Chicken" data-price="3500">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="image/CFC081_1712155259538.jpg">
+                <h3>Beef</h3>
+                <p>Beef</p>
+                <div class="price">₦2,400</div>
+                <button class="add-to-cart" data-name="Beef" data-price="2400">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="image/CFC083_1712155253829.jpg">
+                <h3>Grilled Fish</h3>
+                <p>Grilled Fish</p>
+                <div class="price">₦2,100</div>
+                <button class="add-to-cart" data-name="Grilled Fish" data-price="2100">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="image/Akara recipe sisiyemmie.jpg">
+                <h3>nigerian Akara</h3>
+                <p>nigerian Akara</p>
+                <div class="price">₦1,400</div>
+                <button class="add-to-cart" data-name="nigerian Akara" data-price="1400">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="image/IMG_9896 (2).jpg">
+                <h3>rice and stew nigerian</h3>
+                <p>rice and stew nigerian</p>
+                <div class="price">₦1,200</div>
+                <button class="add-to-cart" data-name="rice and stew nigerian" data-price="1200">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="image/traditional wedding.jpg">
+                <h3>traditional wedding</h3>
+                <p>traditional wedding</p>
+                <div class="price">₦2,500</div>
+                <button class="add-to-cart" data-name="traditional wedding" data-price="2500">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="image/wedding cake.jpg">
+                <h3>wedding cake</h3>
+                <p>wedding cake</p>
+                <div class="price">₦3,000</div>
+                <button class="add-to-cart" data-name="wedding cake" data-price="3000">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="image/NB54441copy (2).jpg">
+                <h3>home</h3>
+                <p>home</p>
+                <div class="price">₦1,500</div>
+                <button class="add-to-cart" data-name="home" data-price="1500">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="image/chcolate cake.jpg">
+                <h3>chcolate cake</h3>
+                <p>chcolate cake</p>
+                <div class="price">₦2,000</div>
+                <button class="add-to-cart" data-name="chcolate cake" data-price="2000">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="image/CFC058_1712155349704.jpg">
+                <h3>cup cake</h3>
+                <p>cup cake</p>
+                <div class="price">₦1,200</div>
+                <button class="add-to-cart" data-name="cup cake" data-price="1200">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="image/CFC087_1712155427825.jpg">
+                <h3>traditional wedding</h3>
+                <p>traditional wedding</p>
+                <div class="price">₦2,500</div>
+                <button class="add-to-cart" data-name="traditional wedding" data-price="2500">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="image/CFC088_1712155423758.jpg">
+                <h3>wedding cake</h3>
+                <p>wedding cake</p>
+                <div class="price">₦3,000</div>
+                <button class="add-to-cart" data-name="wedding cake" data-price="3000">Add to Cart</button>
+            </div>
+              <div class="menu-item">
+                <img src="image/CFC001_1712155415376.jpg">
+                <h3>cup icecream</h3>
+                <p>cup icecream</p>
+                <div class="price">₦2,500</div>
+                <button class="add-to-cart" data-name="cup icecream" data-price="2500">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="image/Ice Cream.jpg">
+                <h3>Ice Cream</h3>
+                <p>Ice Cream</p>
+                <div class="price">₦3,000</div>
+                <button class="add-to-cart" data-name="Ice Cream" data-price="3000">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="image/Pop Corn.jpg">
+                <h3>Pop Corn</h3>
+                <p>Pop Corn</p>
+                <div class="price">₦1,500</div>
+                <button class="add-to-cart" data-name="Pop Corn" data-price="1500">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="image/chcolate cake.jpg">
+                <h3>chcolate cake</h3>
+                <p>chcolate cake</p>
+                <div class="price">₦2,000</div>
+                <button class="add-to-cart" data-name="chcolate cake" data-price="2000">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="image/Parfait.jpg">
+                <h3>Parfait</h3>
+                <p>Parfait</p>
+                <div class="price"><p>#2,500</div>
+                <button class="add-to-cart" data-name="Parfait" data-price="1200">Add to Cart</button>
+            </div>
+             <div class="menu-item">
+                <img src="image/bottle water.jpg">
+                <h3>Bottle Water</h3>
+                <p>Bottle Water</p>
+                <div class="price">₦2,500</div>
+                <button class="add-to-cart" data-name="Bottle Water" data-price="2500">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="image/can malta.jpg">
+                <h3>Can Malta</h3>
+                <p>Can Malta</p>
+                <div class="price">₦3,000</div>
+                <button class="add-to-cart" data-name="Can Malta" data-price="3000">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="image/chi act.jpg">
+                <h3>Goat Meat</h3>
+                <p>Goat Meat</p>
+                <div class="price">₦1,500</div>
+                <button class="add-to-cart" data-name="Goat Meat" data-price="1500">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="image/coca cola.jpg">
+                <h3>Coca Cola</h3>
+                <p>Coca Cola</p>
+                <div class="price">₦2,000</div>
+                <button class="add-to-cart" data-name="Coca Cola" data-price="2000">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="image/exotic.jpg">
+                <h3>exotic</h3>
+                <p>exotict</p>
+                <div class="price">₦1,200</div>
+                <button class="add-to-cart" data-name="exotic" data-price="1200">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="image/Hollandia.jpg">
+                <h3>Fish Delight</h3>
+                <p>Fish Delight</p>
+                <div class="price">₦2,200</div>
+                <button class="add-to-cart" data-name="Fish Delight" data-price="2200">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="image/schweppes.jpg">
+                <h3>schweppes</h3>
+                <p>schweppes</p>
+                <div class="price">₦2,800</div>
+                <button class="add-to-cart" data-name="schweppes" data-price="2800">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="image/sprite2.jpg">
+                <h3>sprite</h3>
+                <p>sprite</p>
+                <div class="price">₦3,500</div>
+                <button class="add-to-cart" data-name="sprite" data-price="3500">Add to Cart</button>
+            </div>
+        </div>
+    </template>
+      <ol class="wizard-progress" id="preparedProgress" aria-label="Prepared food order progress"></ol>
+      <form id="preparedForm" class="booking-form wizard-form" novalidate>
+        <section class="booking-panel wizard-step" data-step="0">
+          <p class="step-kicker">Step 1 of 6</p>
+          <h2 class="form-section-title">Guest Details</h2>
+          <div class="form-group">
+            <label for="preparedGuests">Number of guests *</label>
+            <select id="preparedGuests" name="guests" data-store required>
+              <option value="">Select guest count</option>
+              <option value="100">100 people</option><option value="200">200 people</option>
+              <option value="300">300 people</option><option value="400">400 people</option>
+              <option value="500">500 people</option><option value="600">600 people</option>
+              <option value="700">700 people</option><option value="800">800 people</option>
+              <option value="900">900 people</option><option value="1000">1,000 people</option>
+            </select>
+          </div>
+          <p class="booking-help">You’ll distribute this number of portions across the main food selections in the next step.</p>
+        </section>
+
+        <section class="booking-panel wizard-step" data-step="1" hidden>
+          <p class="step-kicker">Step 2 of 6</p>
+          <h2 class="form-section-title">Choose Your Preferred Food</h2>
+          <p>Select dishes from our current menu and allocate exactly one portion per guest across your selected main dishes.</p>
+          <div class="portion-counter" id="portionCounter" role="status" aria-live="polite">Guest allocation: 0 / 0</div>
+          <label class="form-group" for="preparedMenuSearch"><span>Search menu</span><input id="preparedMenuSearch" type="search" placeholder="Find a dish"></label>
+          <label class="form-group" for="preparedCategory"><span>Filter by menu category</span>
+            <select id="preparedCategory">
+              <option value="">All categories</option>
+              <option value="rice-dishes">Rice Dishes</option>
+              <option value="soups">Soups</option>
+              <option value="proteins">Proteins</option>
+              <option value="cocktails">Drinks &amp; Beverages</option>
+              <option value="traditional-meals">Traditional Meals</option>
+              <option value="sauces-extras">Special Treats</option>
+            </select>
+          </label>
+          <h3 class="subsection-title">Menu items and quantity selection</h3>
+          <div class="booking-menu-grid allocation-menu-grid" id="mainFoodGrid"><p class="menu-loading">Loading dishes from the current menu…</p></div>
+          <p class="allocation-message" id="allocationMessage" aria-live="polite"></p>
+        </section>
+
+        <section class="booking-panel wizard-step" data-step="2" hidden>
+          <p class="step-kicker">Step 3 of 6</p>
+          <h2 class="form-section-title">Would You Like Us to Serve the Food at Your Event?</h2>
+          <div class="choice-stack">
+            <label class="choice-card">
+              <input type="radio" name="serving" value="Yes, NRI MAMA'S KITCHEN should serve the food" required>
+              <span><strong>Yes, NRI MAMA'S KITCHEN Should Serve the Food</strong><small>Our team will assist with serving the food to your guests.</small></span>
+            </label>
+            <label class="choice-card">
+              <input type="radio" name="serving" value="No, just cook the food">
+              <span><strong>No, Just Cook the Food</strong><small>We prepare the food, and you or your event attendants handle serving.</small></span>
+            </label>
+          </div>
+        </section>
+
+        <section class="booking-panel wizard-step" data-step="3" hidden>
+          <p class="step-kicker">Step 4 of 6</p>
+          <h2 class="form-section-title">Can't Find the Food You Want? Customize Your Order!</h2>
+          <div id="preparedCustomFoods" class="dynamic-entry-list"></div>
+          <button type="button" class="secondary-button" id="addPreparedFood">+ Add Another Custom Food</button>
+          <div class="form-group"><label for="preparedInstructions">Additional order instructions</label><textarea id="preparedInstructions" name="instructions" rows="4" data-store></textarea></div>
+        </section>
+
+        <section class="booking-panel wizard-step" data-step="4" hidden>
+          <p class="step-kicker">Step 5 of 6</p>
+          <h2 class="form-section-title">Customer and Event Details</h2>
+          <div class="form-row">
+            <div class="form-group"><label for="preparedName">Full name *</label><input id="preparedName" name="name" autocomplete="name" data-store required></div>
+            <div class="form-group"><label for="preparedPhone">Phone number *</label><input id="preparedPhone" name="phone" type="tel" autocomplete="tel" data-store required></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label for="preparedWhatsapp">WhatsApp number (if different)</label><input id="preparedWhatsapp" name="whatsapp" type="tel" data-store></div>
+            <div class="form-group"><label for="preparedEmail">Email address *</label><input id="preparedEmail" name="email" type="email" autocomplete="email" data-store required></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label for="preparedEventType">Event type *</label><select id="preparedEventType" name="eventType" data-store required>
+              <option value="">Select event type</option><option>Wedding</option><option>Birthday</option>
+              <option>Traditional Marriage</option><option>Burial</option><option>Corporate Event</option>
+              <option>Church Event</option><option>Family Gathering</option><option>Other</option>
+            </select></div>
+            <div class="form-group"><label for="preparedDate">Event date *</label><input id="preparedDate" name="date" type="date" data-store required></div>
+          </div>
+          <div class="form-group"><label for="preparedTime">Preferred delivery time *</label><input id="preparedTime" name="time" type="time" data-store required></div>
+          <fieldset class="fulfilment-options">
+            <legend>How Would You Like to Receive Your Food? *</legend>
+            <label><input type="radio" name="fulfilment" value="Deliver to my event location" required> Deliver to my event location</label>
+            <label><input type="radio" name="fulfilment" value="I will pick it up myself"> I will pick it up myself</label>
+          </fieldset>
+          <div id="preparedAddressFields">
+            <div class="form-group"><label for="preparedAddress">Delivery address *</label><input id="preparedAddress" name="address" autocomplete="street-address" data-store required></div>
+            <div class="form-row">
+              <div class="form-group"><label for="preparedCity">City *</label><input id="preparedCity" name="city" data-store required></div>
+              <div class="form-group"><label for="preparedState">State *</label><input id="preparedState" name="state" data-store required></div>
+            </div>
+            <div class="form-group"><label for="preparedDirections">Directions or landmarks</label><input id="preparedDirections" name="directions" data-store></div>
+          </div>
+          <div id="preparedPickupFields" class="form-group conditional-field" hidden><label for="pickupInstructions">Pickup instructions or additional details</label><textarea id="pickupInstructions" name="pickupInstructions" rows="3" data-store></textarea></div>
+          <div class="form-group"><label for="preparedEventInfo">Additional event information</label><textarea id="preparedEventInfo" name="eventInfo" rows="3" data-store></textarea></div>
+          <p class="guest-reminder">Guests selected: <strong id="preparedGuestReminder">Not selected</strong></p>
+        </section>
+
+        <section class="booking-panel wizard-step" data-step="5" hidden>
+          <p class="step-kicker">Step 6 of 6</p>
+          <h2 class="form-section-title">Review Your Prepared Food Order</h2>
+          <div class="review-summary" id="preparedReview"></div>
+          <p class="booking-help">Your main food portion allocation must equal the guest count. Use Previous or Edit to change any details before submitting.</p>
+          <div class="submit-options">
+            <button type="button" class="booking-btn" id="submitPreparedWhatsApp">Submit Prepared Food Order via WhatsApp</button>
+            <button type="button" class="secondary-button" id="submitPreparedEmail">Send via Email</button>
+          </div>
+        </section>
+        <div class="wizard-controls">
+          <button type="button" class="secondary-button" id="preparedPrevious" hidden>Previous</button>
+          <button type="button" class="booking-btn" id="preparedNext">Continue</button>
+        </div>
+      </form>
+      <p id="preparedStatus" class="booking-status" role="status" aria-live="polite"></p>
+      <p class="email-notice">Email opens a draft addressed to our configured contact. You must review and send the draft; this website does not send email automatically.</p>
+      <a id="preparedWhatsappFallback" class="whatsapp-fallback" href="#" target="_blank" rel="noopener noreferrer" hidden>Open booking message in WhatsApp</a>
+      <a id="preparedEmailFallback" class="whatsapp-fallback email-fallback" href="#" hidden>Open email draft</a>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+  <script src="order-system.js"></script>
+  <script>
+    const PREPARED_KEY = "nriKitchenPreparedOrder";
+    const PREPARED_CART_KEY = "nriKitchenCart";
+    const PREPARED_EMAIL = "Kelechinwadire@gmail.com";
+    const PREPARED_WHATSAPP = "2348162050512";
+    const PREPARED_CATEGORIES = [
+      { key: "rice-dishes", label: "Rice Dishes" },
+      { key: "soups", label: "Soups" },
+      { key: "proteins", label: "Proteins" },
+      { key: "cocktails", label: "Drinks & Beverages" },
+      { key: "traditional-meals", label: "Traditional Meals" },
+      { key: "sauces-extras", label: "Special Treats" }
+    ];
+    const preparedForm = document.getElementById("preparedForm");
+    const preparedSteps = ["Guest Details", "Choose food", "Serving", "Custom food", "Details", "Review"];
+    let preparedStep = 0;
+    let preparedCatalog = [];
+    let mainPortions = {};
+    let extraQuantities = {};
+    let customFoods = [];
+    let preparedSubmittedOrderId = "";
+
+    function preparedField(name) {
+      return preparedForm.querySelector(`[name="${name}"]:checked`)?.value ||
+        preparedForm.querySelector(`[name="${name}"]`)?.value?.trim() || "";
+    }
+
+    function preparedSave() {
+      const values = {};
+      preparedForm.querySelectorAll("[data-store]").forEach(field => { values[field.id] = field.value; });
+      preparedForm.querySelectorAll('input[type="radio"]:checked').forEach(field => { values[`radio:${field.name}`] = field.value; });
+      try {
+        localStorage.setItem(PREPARED_KEY, JSON.stringify({
+          values, mainPortions, extraQuantities, customFoods,
+          submittedOrderId: preparedSubmittedOrderId
+        }));
+      } catch (error) {
+        console.error("Could not save prepared food order progress.", error);
+        document.getElementById("preparedStatus").textContent = "Your browser could not save progress. Keep this page open while you finish.";
+      }
+    }
+
+    function preparedProgress() {
+      const list = document.getElementById("preparedProgress");
+      list.replaceChildren();
+      preparedSteps.forEach((label, index) => {
+        const item = document.createElement("li");
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = index === preparedStep ? "is-current" : index < preparedStep ? "is-complete" : "";
+        button.textContent = `${index + 1}. ${label}`;
+        button.setAttribute("aria-current", index === preparedStep ? "step" : "false");
+        button.disabled = index > preparedStep;
+        if (index <= preparedStep) button.addEventListener("click", () => preparedShowStep(index));
+        item.append(button);
+        list.append(item);
+      });
+    }
+
+    function preparedShowStep(index) {
+      preparedStep = Math.max(0, Math.min(5, index));
+      preparedForm.querySelectorAll(".wizard-step").forEach(step => { step.hidden = Number(step.dataset.step) !== preparedStep; });
+      document.getElementById("preparedPrevious").hidden = preparedStep === 0;
+      document.getElementById("preparedNext").hidden = preparedStep === 5;
+      document.getElementById("preparedStatus").textContent = "";
+      preparedProgress();
+      if (preparedStep === 5) preparedRenderReview();
+      preparedSave();
+      preparedForm.querySelector(`.wizard-step[data-step="${preparedStep}"]`).scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    function preparedFormatCurrency(amount) {
+      return `₦${amount.toLocaleString("en-NG")}`;
+    }
+
+    function preparedProductPrice(item, button) {
+      const shown = Number((item.querySelector(".price")?.textContent || "").replace(/[^\d]/g, ""));
+      if (shown > 0) return shown;
+      const stored = Number(String(button?.dataset.price || "").replace(/[^\d]/g, ""));
+      return stored > 0 ? stored : null;
+    }
+
+    function preparedLoadMenu() {
+      try {
+        const menuTemplate = document.getElementById("preparedMenuCatalog");
+        if (!menuTemplate) throw new Error("The prepared menu catalog is missing.");
+        const products = new Map();
+        menuTemplate.content.querySelectorAll(".menu-item").forEach(item => {
+          const button = item.querySelector(".add-to-cart");
+          const name = (button?.dataset.name || item.querySelector("h3")?.textContent || "").trim();
+          const key = name.toLocaleLowerCase();
+          if (!name || products.has(key)) return;
+          const categories = getMenuItemCategories(item);
+          products.set(name.toLocaleLowerCase(), {
+            key, name,
+            image: item.querySelector("img")?.getAttribute("src") || "",
+            price: preparedProductPrice(item, button),
+            categories,
+            categoryLabels: PREPARED_CATEGORIES
+              .filter(category => categories.includes(category.key))
+              .map(category => category.label)
+          });
+        });
+        preparedCatalog = Array.from(products.values());
+        preparedImportCart();
+        preparedRenderMenu();
+        preparedRestore();
+      } catch (error) {
+        console.error("Could not load prepared order menu items.", error);
+        ["mainFoodGrid"].forEach(id => {
+          const grid = document.getElementById(id);
+          grid.replaceChildren();
+          const message = document.createElement("p");
+          message.className = "menu-load-error";
+          message.textContent = "The prepared food menu could not be loaded. Refresh the page and try again.";
+          grid.append(message);
+        });
+      }
+    }
+
+    function preparedImportCart() {
+      if (Object.keys(mainPortions).length) return;
+      try {
+        const cart = JSON.parse(localStorage.getItem(PREPARED_CART_KEY) || "[]");
+        if (!Array.isArray(cart)) return;
+        cart.forEach(item => {
+          const product = preparedCatalog.find(candidate => candidate.key === String(item.name || "").toLocaleLowerCase());
+          if (product && preparedIsMainProduct(product)) {
+            mainPortions[product.key] = Number(item.units) * 10;
+          }
+        });
+      } catch (error) {
+        console.error("Could not import the saved menu order.", error);
+      }
+    }
+
+    function preparedIsMainProduct(product) {
+      return product.categories.some(category => category !== "cocktails" && category !== "sauces-extras");
+    }
+
+    function preparedRenderMenu() {
+      preparedRenderGrid("mainFoodGrid", preparedCatalog, "categorized");
+      preparedApplyFilters();
+      preparedAllocation();
+    }
+
+    function preparedRenderGrid(gridId, products, mode) {
+      const grid = document.getElementById(gridId);
+      grid.replaceChildren();
+      products.forEach(product => {
+        const type = mode === "categorized" && preparedIsMainProduct(product) ? "main" : "extra";
+        const selections = type === "main" ? mainPortions : extraQuantities;
+        const card = document.createElement("article");
+        card.className = "booking-menu-card allocation-menu-card";
+        card.dataset.productName = product.name;
+        card.dataset.categories = product.categories.join("|");
+        const image = document.createElement("img");
+        image.src = product.image;
+        image.alt = product.name;
+        image.loading = "lazy";
+        const details = document.createElement("div");
+        details.className = "booking-menu-details";
+        const title = document.createElement("h3");
+        title.textContent = product.name;
+        const price = document.createElement("p");
+        price.className = "price";
+        price.textContent = product.price === null ? "Quotation required" : `${preparedFormatCurrency(product.price)} per portion`;
+        const controls = document.createElement("div");
+        controls.className = "allocation-controls";
+        const selectLabel = document.createElement("label");
+        selectLabel.className = "select-product";
+        const checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+        checkbox.checked = Number(selections[product.key] || 0) > 0;
+        const checkboxText = document.createElement("span");
+        checkboxText.textContent = type === "main" ? "Include in guest allocation" : "Add as an extra";
+        selectLabel.append(checkbox, checkboxText);
+        const amountLabel = document.createElement("label");
+        amountLabel.className = "product-quantity-label";
+        amountLabel.textContent = type === "main" ? "Portions" : "Quantity";
+        const amount = document.createElement("input");
+        amount.type = "number";
+        amount.min = "1";
+        amount.step = "1";
+        amount.inputMode = "numeric";
+        amount.value = String(selections[product.key] || 1);
+        amount.disabled = !checkbox.checked;
+        amountLabel.append(amount);
+        checkbox.addEventListener("change", () => {
+          amount.disabled = !checkbox.checked;
+          if (!checkbox.checked) delete selections[product.key];
+          else if (Number.isInteger(Number(amount.value)) && Number(amount.value) > 0) selections[product.key] = Number(amount.value);
+          if (type === "main") preparedAllocation();
+          preparedSave();
+        });
+        amount.addEventListener("input", () => {
+          const value = Number(amount.value);
+          if (checkbox.checked && Number.isInteger(value) && value > 0) selections[product.key] = value;
+          else if (checkbox.checked) delete selections[product.key];
+          if (type === "main") preparedAllocation();
+          preparedSave();
+        });
+        controls.append(selectLabel, amountLabel);
+        details.append(title, price, controls);
+        card.append(image, details);
+        grid.append(card);
+      });
+    }
+
+    function preparedApplyFilters() {
+      const search = document.getElementById("preparedMenuSearch").value.trim().toLocaleLowerCase();
+      const category = document.getElementById("preparedCategory").value;
+      document.querySelectorAll("#mainFoodGrid .allocation-menu-card").forEach(card => {
+        card.hidden = !card.dataset.productName.toLocaleLowerCase().includes(search) ||
+          Boolean(category && !card.dataset.categories.split("|").includes(category));
+      });
+    }
+
+    function preparedAllocation() {
+      const guests = Number(document.getElementById("preparedGuests").value || 0);
+      const allocated = Object.values(mainPortions).reduce((sum, amount) => sum + Number(amount || 0), 0);
+      const counter = document.getElementById("portionCounter");
+      const message = document.getElementById("allocationMessage");
+      counter.textContent = `Guest allocation: ${allocated} / ${guests}`;
+      counter.classList.toggle("is-complete", guests > 0 && allocated === guests);
+      if (!guests) {
+        message.textContent = "Choose the number of guests to start allocating portions.";
+        message.className = "allocation-message is-incomplete";
+      } else if (allocated < guests) {
+        message.textContent = `You still have ${guests - allocated} portions remaining.`;
+        message.className = "allocation-message is-incomplete";
+      } else if (allocated > guests) {
+        message.textContent = `You have exceeded your guest allocation by ${allocated - guests} portions.`;
+        message.className = "allocation-message is-error";
+      } else {
+        message.textContent = "Your guest portion allocation is complete.";
+        message.className = "allocation-message is-complete";
+      }
+    }
+
+    function preparedAddCustom(food = {}) {
+      const entry = {
+        name: food.name || "", quantity: food.quantity || "",
+        description: food.description || "", instructions: food.instructions || ""
+      };
+      customFoods.push(entry);
+      const index = customFoods.length - 1;
+      const card = document.createElement("fieldset");
+      card.className = "dynamic-food-entry";
+      const legend = document.createElement("legend");
+      legend.textContent = `Custom food ${index + 1}`;
+      card.append(legend);
+      [
+        ["name", "Food name", "text", "Name of the food you would like"],
+        ["quantity", "Desired quantity or portions", "text", "e.g. 2 pots or 30 portions"],
+        ["description", "Additional description", "textarea", "Describe your custom dish"],
+        ["instructions", "Special preparation instructions", "textarea", "How would you like it prepared?"]
+      ].forEach(([key, labelText, type, placeholder]) => {
+        const group = document.createElement("div");
+        group.className = "form-group";
+        const id = `preparedFood${index}_${key}`;
+        const label = document.createElement("label");
+        label.htmlFor = id;
+        label.textContent = labelText;
+        const field = type === "textarea" ? document.createElement("textarea") : document.createElement("input");
+        field.id = id;
+        field.value = entry[key];
+        field.placeholder = placeholder;
+        if (type === "textarea") field.rows = 3;
+        field.addEventListener("input", () => { entry[key] = field.value; preparedSave(); });
+        group.append(label, field);
+        card.append(group);
+      });
+      const remove = document.createElement("button");
+      remove.type = "button";
+      remove.className = "remove-food-button";
+      remove.textContent = "Remove this food";
+      remove.addEventListener("click", () => {
+        preparedSubmittedOrderId = "";
+        customFoods.splice(index, 1);
+        preparedRenderCustom();
+        preparedSave();
+      });
+      card.append(remove);
+      document.getElementById("preparedCustomFoods").append(card);
+    }
+
+    function preparedRenderCustom() {
+      const list = document.getElementById("preparedCustomFoods");
+      const foods = customFoods.slice();
+      customFoods = [];
+      list.replaceChildren();
+      if (foods.length) foods.forEach(preparedAddCustom);
+      else preparedAddCustom();
+    }
+
+    function preparedValidateStep() {
+      const step = preparedForm.querySelector(`.wizard-step[data-step="${preparedStep}"]`);
+      const invalid = Array.from(step.querySelectorAll("input, select, textarea"))
+        .find(field => !field.disabled && !field.checkValidity());
+      if (invalid) {
+        invalid.reportValidity();
+        invalid.focus();
+        return false;
+      }
+      if (preparedStep === 1) {
+        const guests = Number(document.getElementById("preparedGuests").value);
+        const allocated = Object.values(mainPortions).reduce((sum, amount) => sum + Number(amount || 0), 0);
+        if (!guests || allocated !== guests || Object.values(mainPortions).some(amount => !Number.isInteger(Number(amount)) || Number(amount) < 1)) {
+          preparedAllocation();
+          document.getElementById("preparedStatus").textContent = "The main food portion allocation must equal the guest count before continuing.";
+          return false;
+        }
+      }
+      if (preparedStep === 3 && customFoods.some(food =>
+        (food.name.trim() || food.quantity.trim() || food.description.trim() || food.instructions.trim()) &&
+        (!food.name.trim() || !food.quantity.trim()))) {
+        document.getElementById("preparedStatus").textContent = "Enter both a food name and quantity for each custom food entry, or remove entries you do not need.";
+        return false;
+      }
+      return true;
+    }
+
+    function preparedProductLines(selections) {
+      return Object.entries(selections).map(([key, quantity]) => {
+        const product = preparedCatalog.find(item => item.key === key);
+        if (!product || Number(quantity) < 1) return null;
+        return { product, quantity: Number(quantity), amount: product.price === null ? "Quotation required" : preparedFormatCurrency(product.price * Number(quantity)) };
+      }).filter(Boolean);
+    }
+
+    function preparedFoodsText() {
+      return customFoods.filter(food => food.name.trim()).map((food, index) =>
+        `${index + 1}. ${food.name}\n   Quantity/portions: ${food.quantity || "Not provided"}\n   Description: ${food.description || "None"}\n   Preparation instructions: ${food.instructions || "None"}\n   Price: Quotation required`
+      ).join("\n\n") || "No custom food requests";
+    }
+
+    function preparedReviewSection(title, text, step) {
+      const section = document.createElement("section");
+      section.className = "review-section";
+      const header = document.createElement("div");
+      header.className = "review-section-header";
+      const heading = document.createElement("h3");
+      heading.textContent = title;
+      const edit = document.createElement("button");
+      edit.type = "button";
+      edit.className = "review-edit-button";
+      edit.textContent = "Edit";
+      edit.addEventListener("click", () => preparedShowStep(step));
+      header.append(heading, edit);
+      const body = document.createElement("pre");
+      body.textContent = text || "Not provided";
+      section.append(header, body);
+      document.getElementById("preparedReview").append(section);
+    }
+
+    function preparedRenderReview() {
+      const review = document.getElementById("preparedReview");
+      review.replaceChildren();
+      const guests = Number(preparedField("guests") || 0);
+      const allocated = Object.values(mainPortions).reduce((sum, amount) => sum + Number(amount || 0), 0);
+      const main = preparedProductLines(mainPortions);
+      const extras = preparedProductLines(extraQuantities);
+      const mainText = main.map(line => `${line.product.name}: ${line.quantity} portions — ${line.amount}`).join("\n");
+      const total = [...main, ...extras].reduce((sum, line) => sum + (line.product.price || 0) * line.quantity, 0);
+      const quoteRequired = [...main, ...extras].some(line => line.product.price === null) || customFoods.some(food => food.name.trim()) || !main.length;
+      const customer = `Name: ${preparedField("name")}\nPhone: ${preparedField("phone")}\nWhatsApp: ${preparedField("whatsapp") || preparedField("phone")}\nEmail: ${preparedField("email")}`;
+      const event = `Type: ${preparedField("eventType")}\nDate: ${preparedField("date")}\nPreferred time: ${preparedField("time")}\nGuests: ${guests.toLocaleString()} people\nAdditional event information: ${preparedField("eventInfo") || "None"}`;
+      const address = [preparedField("address"), preparedField("city"), preparedField("state")].filter(Boolean).join(", ");
+      const delivery = `How to receive food: ${preparedField("fulfilment")}\nAddress: ${address || "Pickup / not provided"}\nDirections/landmarks: ${preparedField("directions") || "None"}\nPickup instructions: ${preparedField("pickupInstructions") || "None"}`;
+      preparedReviewSection("Customer information", customer, 4);
+      preparedReviewSection("Event information", event, 4);
+      preparedReviewSection(`Main food allocation (${allocated} / ${guests} portions)`, mainText || "No menu items selected", 1);
+      preparedReviewSection("Serving arrangement", preparedField("serving"), 2);
+      preparedReviewSection("Custom food requests", preparedFoodsText(), 3);
+      preparedReviewSection("Estimated food amount", quoteRequired
+        ? `${total ? `Known listed items subtotal: ${preparedFormatCurrency(total)}. ` : ""}Final total: Quotation required.`
+        : `${preparedFormatCurrency(total)} (delivery and additional fees are not included)`, 1);
+      preparedReviewSection("Delivery or pickup", delivery, 4);
+      document.getElementById("preparedGuestReminder").textContent = `${guests.toLocaleString()} people`;
+    }
+
+    function preparedBuildOrder(id) {
+      const guests = Number(preparedField("guests") || 0);
+      const main = preparedProductLines(mainPortions);
+      const extras = preparedProductLines(extraQuantities);
+      const total = [...main, ...extras].reduce((sum, line) => sum + (line.product.price || 0) * line.quantity, 0);
+      const quoteRequired = [...main, ...extras].some(line => line.product.price === null) || customFoods.some(food => food.name.trim()) || !main.length;
+      const items = [
+        ...main.map(line => ({
+          name: line.product.name,
+          category: line.product.categoryLabels.join(", "),
+          quantity: line.quantity,
+          unit: "portions",
+          unitPrice: line.product.price,
+          lineTotal: line.product.price === null ? null : line.product.price * line.quantity
+        })),
+        ...extras.map(line => ({
+          name: line.product.name,
+          category: line.product.categoryLabels.join(", "),
+          quantity: line.quantity,
+          unit: "items",
+          unitPrice: line.product.price,
+          lineTotal: line.product.price === null ? null : line.product.price * line.quantity
+        })),
+        ...customFoods.filter(food => food.name.trim()).map(food => ({
+          name: food.name.trim(),
+          category: "Custom request",
+          quantity: food.quantity.trim(),
+          unit: "",
+          unitPrice: null,
+          lineTotal: null,
+          details: [
+            food.description.trim() ? `Description: ${food.description.trim()}` : "",
+            food.instructions.trim() ? `Instructions: ${food.instructions.trim()}` : ""
+          ].filter(Boolean).join("\n")
+        }))
+      ];
+      return {
+        id,
+        createdAt: new Date().toISOString(),
+        service: "prepared",
+        status: "new",
+        customer: {
+          name: preparedField("name"),
+          phone: preparedField("phone"),
+          whatsapp: preparedField("whatsapp"),
+          email: preparedField("email")
+        },
+        event: {
+          type: preparedField("eventType"),
+          date: preparedField("date"),
+          time: preparedField("time"),
+          guests,
+          notes: [preparedField("eventInfo"), preparedField("instructions")].filter(Boolean).join("\n")
+        },
+        delivery: {
+          method: preparedField("fulfilment"),
+          address: preparedField("address"),
+          city: preparedField("city"),
+          state: preparedField("state"),
+          directions: preparedField("directions"),
+          pickupInstructions: preparedField("pickupInstructions"),
+          serving: preparedField("serving")
+        },
+        items,
+        knownSubtotal: total,
+        totalAmount: quoteRequired ? null : total,
+        adminNotes: ""
+      };
+    }
+
+    function preparedSubmit(channel) {
+      for (let index = 0; index < 5; index++) {
+        preparedShowStep(index);
+        if (!preparedValidateStep()) return;
+      }
+      const guests = Number(preparedField("guests"));
+      if (!guests || Object.values(mainPortions).reduce((sum, amount) => sum + Number(amount || 0), 0) !== guests) {
+        preparedShowStep(1);
+        document.getElementById("preparedStatus").textContent = "The main food portion allocation must equal the selected guest count.";
+        return;
+      }
+      preparedShowStep(5);
+      let order;
+      try {
+        order = preparedSubmittedOrderId ? NriOrderSystem.getOrder(preparedSubmittedOrderId) : null;
+        if (!order) {
+          order = preparedBuildOrder(NriOrderSystem.createOrderId());
+          NriOrderSystem.saveOrder(order);
+          preparedSubmittedOrderId = order.id;
+          preparedSave();
+        }
+      } catch (error) {
+        console.error("Could not save the prepared order.", error);
+        document.getElementById("preparedStatus").textContent = `Your order could not be saved in this browser: ${error.message}`;
+        return;
+      }
+      const message = NriOrderSystem.buildWhatsAppMessage(order);
+      if (channel === "whatsapp") {
+        const url = `https://wa.me/${PREPARED_WHATSAPP}?text=${encodeURIComponent(message)}`;
+        window.open(url, "_blank", "noopener,noreferrer");
+        const fallback = document.getElementById("preparedWhatsappFallback");
+        fallback.href = url;
+        fallback.hidden = false;
+        document.getElementById("preparedStatus").textContent = `Order ${order.id} is saved in this browser. Review the details in WhatsApp and press Send to contact the kitchen.`;
+      } else {
+        const url = `mailto:${PREPARED_EMAIL}?subject=${encodeURIComponent(`NRI MAMA'S KITCHEN - Prepared Food Order ${order.id}`)}&body=${encodeURIComponent(message)}`;
+        document.getElementById("preparedEmailFallback").href = url;
+        document.getElementById("preparedEmailFallback").hidden = false;
+        window.location.href = url;
+        document.getElementById("preparedStatus").textContent = `Order ${order.id} is saved in this browser. Review and send the email draft; the website does not send email automatically.`;
+      }
+    }
+
+    function preparedRestore() {
+      try {
+        const saved = JSON.parse(localStorage.getItem(PREPARED_KEY) || "null");
+        if (!saved) {
+          preparedShowStep(0);
+          return;
+        }
+        preparedSubmittedOrderId = typeof saved.submittedOrderId === "string" ? saved.submittedOrderId : "";
+        preparedStep = 0;
+        mainPortions = saved.mainPortions && typeof saved.mainPortions === "object" ? saved.mainPortions : mainPortions;
+        extraQuantities = saved.extraQuantities && typeof saved.extraQuantities === "object" ? saved.extraQuantities : {};
+        customFoods = Array.isArray(saved.customFoods) ? saved.customFoods : [];
+        Object.entries(saved.values || {}).forEach(([key, value]) => {
+          if (key.startsWith("radio:")) {
+            const radio = Array.from(preparedForm.querySelectorAll('input[type="radio"]'))
+              .find(field => field.name === key.slice(6) && field.value === value);
+            if (radio) radio.checked = true;
+          } else if (document.getElementById(key)) document.getElementById(key).value = value;
+        });
+        preparedRenderMenu();
+        preparedRenderCustom();
+        preparedFulfilment();
+        preparedAllocation();
+        preparedShowStep(0);
+      } catch (error) {
+        console.error("Could not restore prepared food order progress.", error);
+        preparedShowStep(0);
+      }
+    }
+
+    function preparedFulfilment() {
+      const pickup = preparedField("fulfilment") === "I will pick it up myself";
+      document.getElementById("preparedAddressFields").hidden = pickup;
+      document.getElementById("preparedPickupFields").hidden = !pickup;
+      ["preparedAddress", "preparedCity", "preparedState"].forEach(id => { document.getElementById(id).required = !pickup; });
+    }
+
+    document.getElementById("preparedNext").addEventListener("click", () => {
+      if (preparedValidateStep()) preparedShowStep(preparedStep + 1);
+    });
+    document.getElementById("preparedPrevious").addEventListener("click", () => preparedShowStep(preparedStep - 1));
+    document.getElementById("submitPreparedWhatsApp").addEventListener("click", () => preparedSubmit("whatsapp"));
+    document.getElementById("submitPreparedEmail").addEventListener("click", () => preparedSubmit("email"));
+    document.getElementById("addPreparedFood").addEventListener("click", () => {
+      preparedSubmittedOrderId = "";
+      preparedAddCustom();
+      preparedSave();
+    });
+    document.getElementById("preparedMenuSearch").addEventListener("input", preparedApplyFilters);
+    document.getElementById("preparedCategory").addEventListener("change", preparedApplyFilters);
+    preparedForm.addEventListener("input", () => {
+      preparedSubmittedOrderId = "";
+      preparedAllocation();
+      if (preparedStep === 5) preparedRenderReview();
+      preparedSave();
+    });
+    preparedForm.addEventListener("change", () => {
+      preparedSubmittedOrderId = "";
+      preparedFulfilment();
+      preparedAllocation();
+      if (preparedStep === 5) preparedRenderReview();
+      preparedSave();
+    });
+    document.getElementById("preparedDate").min = new Date().toISOString().slice(0, 10);
+    preparedRenderCustom();
+    preparedLoadMenu();
+    preparedFulfilment();
+  </script>
+  <footer class="site-footer"><div class="footer-container">
+    <a class="footer-logo" href="index.html"><img src="image/site-logo.jpeg" alt="NRI MAMA'S KITCHEN logo" width="1024" height="1024"><span>NRI MAMA'S KITCHEN</span></a>
+    <section class="footer-contact" aria-labelledby="footerContactHeading"><h2 id="footerContactHeading">Contact</h2><a href="tel:+2348081695675">08081695675</a><a href="tel:+2348162050512">08162050512</a><a href="mailto:Kelechinwadire@gmail.com">Kelechinwadire@gmail.com</a></section>
+    <section class="footer-hours" aria-labelledby="footerHoursHeading"><h2 id="footerHoursHeading">Opening hours</h2><p>Monday to Sunday<br>11:00 AM to 8:00 PM</p></section>
+    <nav class="footer-links" aria-labelledby="footerNavigationHeading"><h2 id="footerNavigationHeading">Quick Navigation</h2><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="media.html">Media</a></li><li><a href="booking.html">Booking</a></li><li><a href="booking.html#faq">FAQ</a></li><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms-and-conditions.html">Terms and Conditions</a></li></ul></nav>
+  </div></footer>
+  <script src="cookie-consent.js"></script>
+</body>
+</html>

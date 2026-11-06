@@ -3,165 +3,127 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NRI MAMA'S KITCHEN | Booking</title>
+  <meta name="description" content="Choose cooking service or prepared food ordering from NRI MAMA'S KITCHEN.">
+  <title>Booking | NRI MAMA'S KITCHEN</title>
+  <meta name="application-name" content="NRI MAMA'S KITCHEN">
+  <meta name="theme-color" content="#8b2e00">
+  <meta property="og:site_name" content="NRI MAMA'S KITCHEN">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon.png">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-<section class="booking-section">
-  <div class="booking-container">
-    <h2 class="booking-title">Event Booking Form</h2>
-    <p class="booking-subtitle">
-      Book NRI MAMA'S KITCHEN for your special event
-    </p>
-
-    <form class="booking-form" onsubmit="sendToWhatsApp(); return false;">
-
-      <div class="form-group">
-        <label>Full Name *</label>
-        <input type="text" id="name" required>
+  <header class="navbar">
+    <a class="logo" href="index.html" aria-label="NRI MAMA'S KITCHEN home">
+      <img src="image/site-logo.jpeg" alt="NRI MAMA'S KITCHEN logo" width="1024" height="1024">
+    </a>
+    <button class="hamburger" type="button" aria-label="Open navigation" aria-controls="navLinks" aria-expanded="false" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="media.html">Media</a>
+      <a href="booking.html" aria-current="page">Booking</a>
+    </nav>
+  </header>
+  <main class="booking-section">
+    <section class="hero booking-hero">
+     <div class="slides">
+        <img src="image/download.jpg" class="slide active">
+        <img src="image/13110503.jpg" class="slide">
+        <img src="image/caribbean-cuisine-03.jpg" class="slide">
+     </div>
+      <div class="hero-text">
+        <p class="booking-hero-kicker">Good food for every gathering</p>
+        <h1 class="nri">Book with NRI MAMA'S KITCHEN</h1>
+        <p class="text-format">Your taste of home away from home.</p>
       </div>
-
-      <div class="form-group">
-        <label>Email Address *</label>
-        <input type="email" id="email" required>
+      <div class="dots">
+        <span class="dot active" onclick="showSlide(0)"></span>
+        <span class="dot" onclick="showSlide(1)"></span>
+        <span class="dot" onclick="showSlide(2)"></span>
       </div>
-
-      <div class="form-group">
-        <label>Phone Number *</label>
-        <input type="tel" id="phone" required>
-      </div>
-
-      <h3 class="form-section-title">Venue Address</h3>
-
-      <div class="form-group">
-        <label>Street Address *</label>
-        <input type="text" id="street" required>
-      </div>
-
-      <div class="form-group">
-        <label>Address Line 2 *</label>
-        <input type="text" id="address2" required>
-      </div>
-
-      <div class="form-row">
-        <div class="form-group">
-          <label>City *</label>
-          <input type="text" id="city" required>
+    </section>
+    
+    <div class="booking-container booking-container-wide">
+      <p class="eyebrow">A celebration starts at the table</p>
+      <h2 class="booking-title">Choose the service that suits you</h2>
+      <p class="booking-subtitle">Tell us what you’re planning. Our guided booking process will help you share the details.</p>
+      <section class="service-section" aria-labelledby="serviceHeading">
+        <h2 class="form-section-title" id="serviceHeading">Choose Your Service</h2>
+        <div class="service-options service-options-two">
+          <article class="service-card">
+            <span class="service-icon" aria-hidden="true">👩🏽‍🍳</span>
+            <h3>Cooking Service</h3>
+            <p>Have your ingredients and cooking materials ready? Let NRI MAMA'S KITCHEN handle the cooking for your event. You provide the ingredients, and we prepare your desired dishes.</p>
+            <a class="booking-btn service-start" href="cooking-service.html">Choose Cooking Service</a>
+          </article>
+          <article class="service-card">
+            <span class="service-icon" aria-hidden="true">🥘</span>
+            <h3>Prepared Food Order</h3>
+            <p>Choose from our delicious selection of already available menu items. Select your preferred dishes, quantities and additional food options, and let NRI MAMA'S KITCHEN prepare your order.</p>
+            <a class="booking-btn service-start" href="prepared-food-order.html">Choose Prepared Food Order</a>
+          </article>
         </div>
-        <div class="form-group">
-          <label>State *</label>
-          <input type="text" id="state" required>
+      </section>
+    </div>
+    <section class="booking-faq" id="faq" aria-labelledby="faqHeading">
+      <div class="booking-faq-inner">
+        <div class="faq-intro">
+          <p class="eyebrow">Here to help</p>
+          <h2 id="faqHeading">Frequently Asked Questions</h2>
+          <p>Find out more about our Nigerian and Igbo food, catering and cooking services.</p>
         </div>
+        <div class="faq-list" aria-label="Frequently asked questions">
+          <details class="faq-item">
+            <summary>What services does NRI MAMA'S KITCHEN offer?</summary>
+            <p>We prepare Nigerian and Igbo dishes, take food orders, and provide catering and cooking services for events and other occasions. Contact us to discuss what you need.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can I provide my own ingredients and ask NRI MAMA'S KITCHEN to cook?</summary>
+            <p>Yes. Choose our cooking service when booking and tell us about the ingredients and cooking materials you will provide. The cooking service fee will be confirmed by our team.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can NRI MAMA'S KITCHEN supply the ingredients and cook for me?</summary>
+            <p>Yes. With full catering, we can source ingredients and prepare your selected dishes. Share your guest count, food choices and event details so we can discuss your requirements and provide a quotation.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Do you offer food delivery?</summary>
+            <p>Delivery arrangements can be discussed when you place an order. You can also choose customer pickup in the booking form. Please contact us to confirm delivery availability and any applicable arrangements.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can I customize my food order?</summary>
+            <p>Yes. Include your preferred dishes, additional proteins, combinations, cooking style, dietary requirements and other instructions in the order form. We will review your requests with you.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How do I book catering services?</summary>
+            <p>Choose a service above, share your event details and food choices, then submit your prepared message to us on WhatsApp to complete your booking request.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How can I get a quotation for my event?</summary>
+            <p>Send us your event type, date, location, number of guests and food selections through the booking form. We will review your requirements and confirm the applicable quotation. Cooking service fees are also confirmed by the business.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How can I contact NRI MAMA'S KITCHEN?</summary>
+            <p>Call <a href="tel:+2348162050512">08162050512</a> or send us a WhatsApp message at <a href="https://wa.me/2348162050512">+234 816 205 0512</a>. You can also email <a href="mailto:Kelechinwadire@gmail.com">Kelechinwadire@gmail.com</a>.</p>
+          </details>
+        </div>
+        <p class="faq-cta">Ready to discuss your event? <a href="#serviceHeading">Start a booking request</a>.</p>
       </div>
-
-      <div class="form-group">
-        <label>Event Date *</label>
-        <input type="date" id="date" required>
-      </div>
-
-      <div class="form-group">
-        <label>Type of Event *</label>
-        <select id="event" required>
-          <option value="">Select</option>
-          <option>Wedding</option>
-          <option>Birthday</option>
-          <option>Corporate Event</option>
-          <option>House Party</option>
-          <option>Religious Event</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label>Number of Guests *</label>
-        <input type="number" id="guests" required>
-      </div>
-
-      <div class="form-group">
-        <label>Preferred Time Slot *</label>
-        <select id="time" required>
-          <option>Morning</option>
-          <option>Afternoon</option>
-          <option>Evening</option>
-          <option>Full Day</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label>Service Format *</label>
-        <select id="service" required>
-          <option>Buffet Service</option>
-          <option>Plated Service</option>
-          <option>Outdoor Catering</option>
-          <option>Pickup Only</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label>Special Dietary Requirements</label>
-        <textarea id="diet" rows="4"></textarea>
-      </div>
-
-      <button type="submit" class="booking-btn">Submit Booking</button>
-    </form>
-
-    <p class="booking-contact">
-      For inquiries call <strong>08162050512</strong>
-    </p>
-  </div>
-</section>
-
-<script>
-function sendToWhatsApp() {
-  const booking = {
-    name: name.value,
-    email: email.value,
-    phone: phone.value,
-    street: street.value,
-    city: city.value,
-    state: state.value,
-    event: event.value,
-    date: date.value,
-    guests: guests.value,
-    time: time.value,
-    service: service.value,
-    diet: diet.value,
-    createdAt: new Date().toLocaleString()
-  };
-
-  // Save to localStorage
-  let bookings = JSON.parse(localStorage.getItem("nriBookings")) || [];
-  bookings.push(booking);
-  localStorage.setItem("nriBookings", JSON.stringify(bookings));
-
-  // WhatsApp message
-  let message =
-`NRI MAMA'S KITCHEN BOOKING
--------------------------
-Name: ${booking.name}
-Phone: ${booking.phone}
-Email: ${booking.email}
-
-Event: ${booking.event}
-Date: ${booking.date}
-Guests: ${booking.guests}
-Time: ${booking.time}
-Service: ${booking.service}
-
-Address:
-${booking.street}, ${booking.address2}
-${booking.city}, ${booking.state}
-
-Dietary Notes:
-${booking.diet}`;
-
-  let url = "https://wa.me/2348162050512?text=" + encodeURIComponent(message);
-  window.open(url, "_blank");
-
-  alert("Booking submitted successfully!");
-  document.querySelector(".booking-form").reset();
-}
-</script>
-
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-container">
+      <a class="footer-logo" href="index.html"><img src="image/site-logo.jpeg" alt="NRI MAMA'S KITCHEN logo" width="1024" height="1024"><span>NRI MAMA'S KITCHEN</span></a>
+      <section class="footer-contact" aria-labelledby="footerContactHeading"><h2 id="footerContactHeading">Contact</h2><a href="tel:+2348081695675">08081695675</a><a href="tel:+2348162050512">08162050512</a><a href="mailto:Kelechinwadire@gmail.com">Kelechinwadire@gmail.com</a></section>
+      <section class="footer-hours" aria-labelledby="footerHoursHeading"><h2 id="footerHoursHeading">Opening hours</h2><p>Monday to Sunday<br>11:00 AM to 8:00 PM</p></section>
+      <nav class="footer-links" aria-labelledby="footerNavigationHeading">
+        <h2 id="footerNavigationHeading">Quick Navigation</h2>
+        <ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="media.html">Media</a></li><li><a href="booking.html">Booking</a></li><li><a href="booking.html#faq">FAQ</a></li><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms-and-conditions.html">Terms and Conditions</a></li></ul>
+      </nav>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+  <script src="cookie-consent.js"></script>
 </body>
 </html>

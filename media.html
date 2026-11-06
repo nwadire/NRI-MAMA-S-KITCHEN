@@ -4,23 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NRI MAMA'S KITCHEN - Media</title>
+    <meta name="application-name" content="NRI MAMA'S KITCHEN">
+    <meta name="theme-color" content="#8b2e00">
+    <meta property="og:site_name" content="NRI MAMA'S KITCHEN">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon.png">
     <link href="./styles.css" rel="stylesheet">
 </head>
 <body>
      <header class="navbar">
-        <div class="logo">
-            <img src="/image/WhatsApp Image 2026-01-23 at 9.12.55 PM.jpeg" alt="NRI MAMA'S KITCHEN Logo">
-        </div>
-        <div class="hamburger" onclick="toggleMenu()">
+        <a class="logo" href="index.html" aria-label="NRI MAMA'S KITCHEN home">
+            <img src="image/site-logo.jpeg" alt="NRI MAMA'S KITCHEN logo" width="1024" height="1024">
+        </a>
+        <button class="hamburger" type="button" aria-label="Open navigation" aria-controls="navLinks" aria-expanded="false" onclick="toggleMenu()">
             <span></span>
             <span></span>
             <span></span>
-        </div>
-            <nav class="nav-links" id="navLinks">
+        </button>
+            <nav class="nav-links" id="navLinks" aria-label="Main navigation">
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="media.html">Media</a>
-                <a href="menu.html">Menu</a>
+                <a href="booking.html">Booking</a>
             </nav>
     </header>
     <main>
@@ -40,92 +44,84 @@
                 <span class="dot" onclick="showSlide(1)"></span>
                 <span class="dot" onclick="showSlide(2)"></span>
             </div>
-            <script src="script.js"></script>
         </section>
         <section class="media">
             <h2 class="meals-gallery">Media Gallery</h2>
             <p>Welcome to the media gallery of NRI MAMA'S KITCHEN. Here you can find photos and videos showcasing our delicious dishes, catering events, and decorations. Explore our gallery to see the quality and authenticity of our services.</p>
-            <!-- Media content such as images and videos would go here -->
-            <div class="gallery"> 
-                <div class="gallery-item"><img src="./image/1_gg_XEbocWw0qErn7plPX1A (1).jpg" alt="Delicious Dish 1"></div>
-                <div class="gallery-item"><img src="./image/1.jpg" alt="Delicious Dish 2"></div>
-                <div class="gallery-item"><img src="./image/27afb2e8bc568b4a0198de6191bce723.jpg" alt="Delicious Dish 3"></div>
-                <div class="gallery-item"><img src="./image/80e39bb03c51504e26e842c8e4fc5896.jpg" alt="Delicious Dish 4"></div>
-                <div class="gallery-item"><img src="./image/traditional wedding.jpg" alt="Delicious Dish 5"></div>
-                <div class="gallery-item"><img src="./image/Fried Rice.jpg" alt="Delicious Dish 6"></div>
-                <div class="gallery-item"><img src="./image/Akara recipe sisiyemmie.jpg" alt="Delicious Dish 7"></div>
-                <div class="gallery-item"><img src="./image/c2d8b2a1add3b32480dd92df8ac8558d.jpg" alt="Delicious Dish 8"></div>
-                <div class="gallery-item"><img src="./image/maxresdefault.jpg" alt="Delicious Dish 9"></div>
-                <div class="gallery-item"><img src="./image/R.jpg" alt="Delicious Dish 10"></div>
+            <div class="gallery">
+                <button class="gallery-item" type="button" aria-label="Preview Nigerian dish">
+                    <img src="./image/1_gg_XEbocWw0qErn7plPX1A (1).jpg" alt="A freshly prepared Nigerian dish">
+                </button>
+                <button class="gallery-item" type="button" aria-label="Preview Nigerian meal">
+                    <img src="./image/1.jpg" alt="A plated Nigerian meal">
+                </button>
+                <button class="gallery-item" type="button" aria-label="Preview catering dish">
+                    <img src="./image/27afb2e8bc568b4a0198de6191bce723.jpg" alt="A catered meal prepared by NRI MAMA'S KITCHEN">
+                </button>
+                <button class="gallery-item" type="button" aria-label="Preview food platter">
+                    <img src="./image/80e39bb03c51504e26e842c8e4fc5896.jpg" alt="A food platter for an event">
+                </button>
+                <button class="gallery-item" type="button" aria-label="Preview traditional wedding">
+                    <img src="./image/traditional wedding.jpg" alt="Traditional wedding catering">
+                </button>
+                <button class="gallery-item" type="button" aria-label="Preview fried rice">
+                    <img src="./image/Fried Rice.jpg" alt="Nigerian fried rice">
+                </button>
+                <button class="gallery-item" type="button" aria-label="Preview akara">
+                    <img src="./image/Akara recipe sisiyemmie.JPG" alt="Freshly prepared akara">
+                </button>
+                <button class="gallery-item" type="button" aria-label="Preview event catering">
+                    <img src="./image/c2d8b2a1add3b32480dd92df8ac8558d.jpg" alt="Food prepared for an event">
+                </button>
+                <button class="gallery-item" type="button" aria-label="Preview Nigerian food">
+                    <img src="./image/maxresdefault.jpg" alt="Nigerian food prepared for sharing">
+                </button>
+                <button class="gallery-item" type="button" aria-label="Preview meal">
+                    <img src="./image/R.jpg" alt="A delicious meal from NRI MAMA'S KITCHEN">
+                </button>
            </div>
         </section>
-        <section class="contact">
-            <h2>Contact Us</h2>
-            <p>Have questions or want to book our services? Reach out to us through the contact information below:</p>
-            <ul>
-                <li><strong>Email:</strong> info@nrimamas.com</li>
-                <li><strong>Phone:</strong> +234 803 123 4567</li>
-                <li><strong>Address:</strong> 123 Food Street, Lagos, Nigeria</li>
-            </ul>
-        </section>
-        <section class="call-to-action">
-            <a href="booking.html" class="cta-card book">
-                <div class="cta-overlay">
-                    <h3>Book Now</h3>
-                    <span>Learn more</span>
+        <section class="contact-section" aria-labelledby="contactHeading">
+            <div class="contact-inner">
+                <div class="contact-photo">
+                    <img src="./image/traditional wedding.jpg" alt="NRI MAMA'S KITCHEN food prepared for a celebration" loading="lazy">
+                    <span>Made with care, served with love</span>
                 </div>
-            </a>
-
-            <a href="menu.html" class="cta-card menu">
-                <div class="cta-overlay">
-                  <p>Have questions or want to book our services? Reach out to us through the contact information below:</p>
-            <ul>
-                <li><strong>Email:</strong> info@nrimamas.com</li>
-                <li><strong>Phone:</strong> +234 803 123 4567</li>
-                <li><strong>Address:</strong> 123 Food Street, Lagos, Nigeria</li>
-            </ul>
+                <div class="contact-content">
+                    <p class="eyebrow">We’re here to help</p>
+                    <h2 id="contactHeading">Let’s make your next gathering special</h2>
+                    <p>Talk with our team about catering, cooking service or a prepared food order. We’ll help you plan the next step.</p>
+                    <div class="contact-methods">
+                        <a href="tel:+2348162050512"><span>Call us</span><strong>08162050512</strong></a>
+                        <a href="mailto:Kelechinwadire@gmail.com"><span>Email us</span><strong>Kelechinwadire@gmail.com</strong></a>
+                        <a href="https://wa.me/2348162050512"><span>WhatsApp</span><strong>+234 816 205 0512</strong></a>
+                    </div>
+                    <a class="booking-btn contact-booking-link" href="booking.html">Start a booking request</a>
                 </div>
-            </a>
+            </div>
         </section>
     </main>
-    <footer>
+    <dialog class="image-lightbox" id="imageLightbox" aria-label="Image preview">
+        <button class="lightbox-close" type="button" aria-label="Close image preview">&times;</button>
+        <button class="lightbox-arrow lightbox-previous" type="button" aria-label="Previous image">&#10094;</button>
+        <figure>
+            <img class="lightbox-image" src="" alt="">
+            <figcaption class="lightbox-caption"></figcaption>
+        </figure>
+        <button class="lightbox-arrow lightbox-next" type="button" aria-label="Next image">&#10095;</button>
+    </dialog>
+    <footer class="site-footer">
         <div class="footer-container">
-            <div class="footer-logo">
-                <img src="/image/WhatsApp Image 2026-01-23 at 9.12.55 PM.jpeg" alt="NRI MAMA'S KITCHEN Logo">
-                <h3>NRI MAMA'S KITCHEN</h3>
-            </div>
-            <div class="footer-hours">
-                <strong>Opening Hours</strong><br>
-                Mondays to Sundays<br>
-                11:00 AM to 8:00 PM
-            </div>
-            <div class="footer-contact">
-                <strong>Contact Us</strong><br>
-                <a href="mailto:Kelechinwadire@gmail.com">customercare@nrimamas.com</a>
-                <a href="tel:08081695675">08081695675</a>
-                <a href="tel:08162050512">08162050512</a>
-            </div>
-            <div class="footer-links">
-                <strong>Quick Navigation</strong><br>
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="media.html">Media</a>
-                <a href="menu.html">Menu</a>
-                <a href="booking.html">Booking</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms and Conditions</a>
-            </div>
-            <div class="footer-social">
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fas fa-envelope"></i></a>
-                <a href="#"><i class="fab fa-tiktok"></i></a>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            &copy; 2026 nrimamakitchen. All rights reserved.
+            <a class="footer-logo" href="index.html"><img src="image/site-logo.jpeg" alt="NRI MAMA'S KITCHEN logo" width="1024" height="1024"><span>NRI MAMA'S KITCHEN</span></a>
+            <section class="footer-contact" aria-labelledby="footerContactHeading"><h2 id="footerContactHeading">Contact</h2><a href="tel:+2348081695675">08081695675</a><a href="tel:+2348162050512">08162050512</a><a href="mailto:Kelechinwadire@gmail.com">Kelechinwadire@gmail.com</a></section>
+            <section class="footer-hours" aria-labelledby="footerHoursHeading"><h2 id="footerHoursHeading">Opening hours</h2><p>Monday to Sunday<br>11:00 AM to 8:00 PM</p></section>
+            <nav class="footer-links" aria-labelledby="footerNavigationHeading">
+                <h2 id="footerNavigationHeading">Quick Navigation</h2>
+                <ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="media.html">Media</a></li><li><a href="booking.html">Booking</a></li><li><a href="booking.html#faq">FAQ</a></li><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms-and-conditions.html">Terms and Conditions</a></li></ul>
+            </nav>
         </div>
     </footer>
+    <script src="script.js"></script>
+    <script src="cookie-consent.js"></script>
 </body>
 </html>

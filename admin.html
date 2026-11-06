@@ -2,105 +2,97 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>NRI MAMA'S KITCHEN | Admin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Local demo dashboard for NRI MAMA'S KITCHEN order enquiries.">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Order Dashboard | NRI MAMA'S KITCHEN</title>
+  <meta name="application-name" content="NRI MAMA'S KITCHEN">
+  <meta name="theme-color" content="#8b2e00">
+  <meta property="og:site_name" content="NRI MAMA'S KITCHEN">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon.png">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="admin-page">
+  <header class="admin-header">
+    <a class="admin-brand" href="index.html">
+      <img src="image/site-logo.jpeg" alt="NRI MAMA'S KITCHEN logo" width="1024" height="1024">
+      <span>NRI MAMA'S KITCHEN <small>Order management</small></span>
+    </a>
+    <nav aria-label="Admin navigation">
+      <a href="index.html">View website</a>
+      <a href="booking.html">Booking</a>
+    </nav>
+  </header>
+  <main class="admin-dashboard">
+    <section class="admin-demo-notice" aria-label="Demo mode notice">
+      <strong>Local demo mode</strong>
+      <p>Orders and status updates are saved only in this browser. They are not shared across devices and this dashboard is not access-protected. Do not use this mode for real customer data.</p>
+    </section>
 
-<!-- LOGIN SECTION -->
-<section class="login-section" id="loginSection">
-  <div class="login-box">
-    <h2>🔐 Admin Login</h2>
-    <p>NRI MAMA'S KITCHEN</p>
+    <section class="admin-dashboard-heading">
+      <div>
+        <p class="admin-eyebrow">Kitchen operations</p>
+        <h1>Orders overview</h1>
+        <p>Review local demo requests and update fulfilment. Customers arrange any payment directly with the kitchen; this website does not process payments.</p>
+      </div>
+      <div class="admin-heading-actions">
+        <button class="admin-secondary-button" id="exportOrders" type="button">Export CSV</button>
+        <button class="admin-danger-button" id="clearOrders" type="button">Clear all demo orders</button>
+      </div>
+    </section>
 
-    <input type="password" id="adminPassword" placeholder="Enter Admin Password">
-    <button onclick="login()">Login</button>
+    <section class="admin-stat-grid" aria-label="Order totals">
+      <article class="admin-stat-card"><span>All orders</span><strong id="statTotal">0</strong><small>Saved in this browser</small></article>
+      <article class="admin-stat-card"><span>Open orders</span><strong id="statOpen">0</strong><small>Awaiting completion</small></article>
+    </section>
 
-    <p class="error" id="loginError"></p>
-  </div>
-</section>
-
-<!-- DASHBOARD SECTION -->
-<section class="admin-section" id="dashboardSection" style="display:none;">
-  <div class="admin-container">
-    <h2>📊 Booking Admin Dashboard</h2>
-    <button class="logout-btn" onclick="logout()">Logout</button>
-
-    <table class="admin-table">
-      <thead>
-        <tr>
-          <th>Date</th>
-          <th>Name</th>
-          <th>Phone</th>
-          <th>Event</th>
-          <th>Guests</th>
-          <th>Location</th>
-          <th>Service</th>
-        </tr>
-      </thead>
-      <tbody id="bookingTable"></tbody>
-    </table>
-
-    <button class="clear-btn" onclick="clearBookings()">Clear All Bookings</button>
-  </div>
-</section>
-
-<script>
-const ADMIN_PASSWORD = "nri123"; // 🔴 CHANGE THIS PASSWORD
-
-function login() {
-  const pass = document.getElementById("adminPassword").value;
-
-  if (pass === ADMIN_PASSWORD) {
-    localStorage.setItem("adminLoggedIn", "true");
-    showDashboard();
-  } else {
-    document.getElementById("loginError").textContent = "Incorrect password!";
-  }
-}
-
-function logout() {
-  localStorage.removeItem("adminLoggedIn");
-  location.reload();
-}
-
-function showDashboard() {
-  document.getElementById("loginSection").style.display = "none";
-  document.getElementById("dashboardSection").style.display = "block";
-  loadBookings();
-}
-
-function loadBookings() {
-  const bookings = JSON.parse(localStorage.getItem("nriBookings")) || [];
-  const table = document.getElementById("bookingTable");
-  table.innerHTML = "";
-
-  bookings.forEach(b => {
-    table.innerHTML += `
-      <tr>
-        <td>${b.createdAt}</td>
-        <td>${b.name}</td>
-        <td>${b.phone}</td>
-        <td>${b.event}</td>
-        <td>${b.guests}</td>
-        <td>${b.city}, ${b.state}</td>
-        <td>${b.service}</td>
-      </tr>
-    `;
-  });
-}
-
-function clearBookings() {
-  if (confirm("Delete all bookings?")) {
-    localStorage.removeItem("nriBookings");
-    loadBookings();
-  }
-}
-
-if (localStorage.getItem("adminLoggedIn") === "true") {
-  showDashboard();
-}
-</script>
-
+    <section class="admin-orders-panel" aria-labelledby="ordersHeading">
+      <div class="admin-orders-title">
+        <div>
+          <h2 id="ordersHeading">Customer orders</h2>
+          <p id="ordersCount" role="status" aria-live="polite">0 orders</p>
+        </div>
+        <button class="admin-refresh-button" id="refreshOrders" type="button">Refresh</button>
+      </div>
+      <div class="admin-filter-bar">
+        <label class="admin-search-label" for="orderSearch">Search orders
+          <input id="orderSearch" type="search" placeholder="Name, phone, order ID, or food">
+        </label>
+        <label for="serviceFilter">Service
+          <select id="serviceFilter">
+            <option value="">All services</option>
+            <option value="prepared">Prepared food order</option>
+            <option value="cooking">Cooking service</option>
+          </select>
+        </label>
+        <label for="statusFilter">Order status
+          <select id="statusFilter">
+            <option value="">All statuses</option>
+            <option value="new">New</option><option value="confirmed">Confirmed</option>
+            <option value="preparing">Preparing</option><option value="ready">Ready</option>
+            <option value="completed">Completed</option><option value="cancelled">Cancelled</option>
+          </select>
+        </label>
+      </div>
+      <p id="adminStatus" class="admin-status" role="status" aria-live="polite"></p>
+      <div id="adminOrders" class="admin-order-list"></div>
+      <div id="emptyOrders" class="admin-empty-state" hidden>
+        <span aria-hidden="true">🍽️</span>
+        <h3>No matching orders</h3>
+        <p>New requests saved from this browser will appear here.</p>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-container">
+      <a class="footer-logo" href="index.html"><img src="image/site-logo.jpeg" alt="NRI MAMA'S KITCHEN logo" width="1024" height="1024"><span>NRI MAMA'S KITCHEN</span></a>
+      <section class="footer-contact" aria-labelledby="footerContactHeading"><h2 id="footerContactHeading">Contact</h2><a href="tel:+2348081695675">08081695675</a><a href="tel:+2348162050512">08162050512</a><a href="mailto:Kelechinwadire@gmail.com">Kelechinwadire@gmail.com</a></section>
+      <section class="footer-hours" aria-labelledby="footerHoursHeading"><h2 id="footerHoursHeading">Opening hours</h2><p>Monday to Sunday<br>11:00 AM to 8:00 PM</p></section>
+      <nav class="footer-links" aria-labelledby="footerNavigationHeading"><h2 id="footerNavigationHeading">Quick Navigation</h2><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="media.html">Media</a></li><li><a href="booking.html">Booking</a></li><li><a href="booking.html#faq">FAQ</a></li><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms-and-conditions.html">Terms and Conditions</a></li></ul></nav>
+    </div>
+  </footer>
+  <script src="order-system.js"></script>
+  <script src="admin.js"></script>
+  <script src="cookie-consent.js"></script>
 </body>
 </html>

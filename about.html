@@ -4,23 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About NRI MAMA'S KITCHEN</title>
+    <meta name="application-name" content="NRI MAMA'S KITCHEN">
+    <meta name="theme-color" content="#8b2e00">
+    <meta property="og:site_name" content="NRI MAMA'S KITCHEN">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon.png">
     <link href="./styles.css" rel="stylesheet">
 </head>
 <body>
       <header class="navbar">
-        <div class="logo">
-            <img src="/image/WhatsApp Image 2026-01-23 at 9.12.55 PM.jpeg" alt="NRI MAMA'S KITCHEN Logo">
-        </div>
-        <div class="hamburger" onclick="toggleMenu()">
+        <a class="logo" href="index.html" aria-label="NRI MAMA'S KITCHEN home">
+            <img src="image/site-logo.jpeg" alt="NRI MAMA'S KITCHEN logo" width="1024" height="1024">
+        </a>
+        <button class="hamburger" type="button" aria-label="Open navigation" aria-controls="navLinks" aria-expanded="false" onclick="toggleMenu()">
             <span></span>
             <span></span>
             <span></span>
-        </div>
-            <nav class="nav-links" id="navLinks">
+        </button>
+            <nav class="nav-links" id="navLinks" aria-label="Main navigation">
                 <a href="index.html">Home</a>
-                <a href="about.html">About</a>
+                <a href="about.html" aria-current="page">About</a>
                 <a href="media.html">Media</a>
-                <a href="menu.html">Menu</a>
+                <a href="booking.html">Booking</a>
             </nav>
     </header>
     <main>
@@ -65,7 +69,7 @@
         <section class="our-core-values">
             <div class="container">
                 <h2 class="section-title">Our Core Values</h2>
-                <p class="section-subtitle">At <strong>NRI MAMA’S KITCHEN</strong>, our values guide everything we do.The acronym <strong>“MAMA CARES”</strong> represents who we are.</p>
+                <p class="section-subtitle">At <strong>NRI MAMA’S KITCHEN</strong>, our values guide everything we do. The letters in <strong>“NRI MAMA’S”</strong> express the principles behind our food and service.</p>
                 <div class="vm-box">
                       <div class="vm-card">
                           <h3>Our Vision</h3>
@@ -79,89 +83,64 @@
                 </div>
              <div class="values-grid">
                    <div class="value-card">
-                      <span>M</span>
-                      <h4>Mastery</h4>
-                      <p>Delivering authentic Nigerian dishes with passion and skill.</p>
+                      <span>N</span>
+                      <h4>Nurturing Hospitality</h4>
+                      <p>Making every customer feel welcome through thoughtful food and caring service.</p>
                    </div>
                        <div class="value-card">
-                           <span>A</span>
-                           <h4>Accountability</h4>
-                           <p>Taking responsibility for quality, service, and satisfaction.</p>
+                           <span>R</span>
+                           <h4>Reliability</h4>
+                           <p>Following through on confirmed orders and delivering dependable service.</p>
                        </div>
+                        <div class="value-card">
+                            <span>I</span>
+                            <h4>Integrity</h4>
+                            <p>Being honest, respectful, and responsible in every customer interaction.</p>
+                        </div>
+                        <div class="value-card">
+                            <span>M</span>
+                            <h4>Mastery</h4>
+                            <p>Preparing Nigerian dishes with skill, care, and pride in our craft.</p>
+                        </div>
+                        <div class="value-card">
+                           <span>A</span>
+                           <h4>Authenticity</h4>
+                           <p>Celebrating the rich flavours and traditions of Nigerian cuisine.</p>
+                        </div>
                         <div class="value-card">
                             <span>M</span>
                             <h4>Mindful Service</h4>
-                            <p>Caring for customers and handling every order with dedication.</p>
+                            <p>Listening carefully and handling each request with consideration.</p>
                         </div>
                         <div class="value-card">
-                            <span>A</span>
-                            <h4>Authenticity</h4>
-                            <p>Staying true to traditional Nigerian flavors.</p>
-                        </div>
-                        <div class="value-card">
-                           <span>C</span>
-                           <h4>Customer First</h4>
-                           <p>Putting customers at the heart of everything we do.</p>
-                        </div>
-                        <div class="value-card">
-                            <span>A</span>
-                            <h4>Attention to Detail</h4>
-                            <p>Excellence from food preparation to event setup.</p>
-                        </div>
-                        <div class="value-card">
-                           <span>R</span>
-                           <h4>Respect</h4>
-                            <p>Respect for people, culture, teamwork, and values.</p>
+                           <span>A</span>
+                           <h4>Attention to Detail</h4>
+                            <p>Taking care with ingredients, preparation, presentation, and event needs.</p>
                         </div>
                         <div class="value-card">
                             <span>S</span>
-                            <h4>Support</h4>
-                            <p>Reliable catering, equipment hire, and event planning.</p>
+                            <h4>Service Excellence</h4>
+                            <p>Going the extra mile to make every meal and occasion memorable.</p>
                         </div>
                 </div>
             </div>
         </section>
     </main>
-    <footer>
+    <footer class="site-footer">
         <div class="footer-container">
-            <div class="footer-logo">
-                <img src="/image/WhatsApp Image 2026-01-23 at 9.12.55 PM.jpeg" alt="NRI MAMA'S KITCHEN Logo">
-                <h3>NRI MAMA'S KITCHEN</h3>
-            </div>
-            <div class="footer-hours">
-                <strong>Opening Hours</strong><br>
-                Mondays to Sundays<br>
-                11:00 AM to 8:00 PM
-            </div>
-            <div class="footer-contact">
-                <strong>Contact Us</strong><br>
-                <a href="mailto:Kelechinwadire@gmail.com">customercare@nrimamas.com</a>
-                <a href="tel:08081695675">08081695675</a>
-                <a href="tel:08162050512">08162050512</a>
-            </div>
-            <div class="footer-links">
-                <strong>Quick Navigation</strong><br>
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="media.html">Media</a>
-                <a href="menu.html">Menu</a>
-                <a href="booking.html">Booking</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms and Conditions</a>
-            </div>
-            <div class="footer-social">
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fas fa-envelope"></i></a>
-                <a href="#"><i class="fab fa-tiktok"></i></a>
-            </div>
+            <a class="footer-logo" href="index.html"><img src="image/site-logo.jpeg" alt="NRI MAMA'S KITCHEN logo" width="1024" height="1024"><span>NRI MAMA'S KITCHEN</span></a>
+            <section class="footer-contact" aria-labelledby="footerContactHeading">
+                <h2 id="footerContactHeading">Contact</h2>
+                <a href="tel:+2348081695675">08081695675</a><a href="tel:+2348162050512">08162050512</a>
+                <a href="mailto:Kelechinwadire@gmail.com">Kelechinwadire@gmail.com</a>
+            </section>
+            <section class="footer-hours" aria-labelledby="footerHoursHeading"><h2 id="footerHoursHeading">Opening hours</h2><p>Monday to Sunday<br>11:00 AM to 8:00 PM</p></section>
+            <nav class="footer-links" aria-labelledby="footerNavigationHeading">
+                <h2 id="footerNavigationHeading">Quick Navigation</h2>
+                <ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="media.html">Media</a></li><li><a href="booking.html">Booking</a></li><li><a href="booking.html#faq">FAQ</a></li><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms-and-conditions.html">Terms and Conditions</a></li></ul>
+            </nav>
         </div>
-        <div class="footer-bottom">
-            &copy; 2026 nrimamakitchen. All rights reserved.
-        </div>
-
     </footer>
-
+    <script src="cookie-consent.js"></script>
 </body>
 </html>
